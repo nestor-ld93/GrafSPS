@@ -1,0 +1,19 @@
+# Ignorando archivos de salida:
+.directory
+.git/
+.../
+__pycache__/
+imgs/
+Recursos/
+Catalogo_NEIC-Peru-1980-2019.csv
+coordenadas_perfiles.txt
+linea_perfil.txt
+linea_topo_bati.txt
+sismos_superficiales.txt
+sismos_intermedios.txt
+sismos_profundos.txt
+sismicidad.eps
+sismicidad_perfil.eps
+perfil_sismicidad_norte.eps
+perfil_sismicidad_centro.eps
+perfil_sismicidad_sur.eps
