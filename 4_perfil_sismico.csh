@@ -3,10 +3,10 @@
 #==================================================================================
 echo ""
 echo "+==========================================================================+"
-echo "|                           PERFIL SISMICO v1.0.0                          |"
+echo "|                           PERFIL SISMICO v1.1.0                          |"
 echo "+==========================================================================+"
 echo "| -Grafica el perfil de profundidad con datos de topografia (GRD/NC)       |"
-echo "| -Ultima actualizacion: 16/07/2020                                        |"
+echo "| -Ultima actualizacion: 17/10/2020                                        |"
 echo "| -Basado en los scripts de Cesar Jimenez y Cristobal Condori              |"
 echo "+--------------------------------------------------------------------------+"
 echo "| -Copyright (C) 2020  Nestor Luna Diaz                                    |"
@@ -53,6 +53,15 @@ set linea_topo_bati = linea_topo_bati.txt
 set TITULO_leyenda_pre = $10
 set TITULO_leyenda = `echo $TITULO_leyenda_pre | tr "%" " "`
 
+#set Label_x = "Distancia\040(km)"
+set Label_x = $14
+set Label_y1 = $15
+set Label_y2 = $16
+
+set Titulo_perfil_norte =  "$17\040AA\47"
+set Titulo_perfil_centro = "$17\040BB\47"
+set Titulo_perfil_sur    = "$17\040CC\47"
+
 set leyenda = $3           # Variables: 'si', 'no' (mostrar leyenda, no mostrar leyenda)
 set perfil_region = $2     # Variables: 'norte', 'centro', 'sur'
 set L1 = $4
@@ -62,6 +71,15 @@ set L3 = $6
 set mostrar_sup  = $7     # Variables: 'si', 'no' (Graficar sismos superficiales, no graficar).
 set mostrar_int  = $8     # Variables: 'si', 'no' (Graficar sismos intermedios, no graficar).
 set mostrar_prof = $9     # Variables: 'si', 'no' (Graficar sismos profundos, no graficar).
+
+set Texto_leyenda_01_pre = $11
+set Texto_leyenda_01 = `echo $Texto_leyenda_01_pre | tr "%" " "`
+
+set Texto_leyenda_02_pre = $12
+set Texto_leyenda_02 = `echo $Texto_leyenda_02_pre | tr "%" " "`
+
+set Texto_leyenda_03_pre = $13
+set Texto_leyenda_03 = `echo $Texto_leyenda_03_pre | tr "%" " "`
 
 gmtset HEADER_FONT_SIZE 14
 gmtset ANOT_FONT_SIZE 12
@@ -82,11 +100,17 @@ set resto_L = `echo "$L%50.0" | bc` # Corrección para el límite final del eje 
 if ($resto_L != 0) then
     set L = `echo "scale=2; $L-$resto_L+50.0" | bc` 
 endif
-set REGION1 = 0/$L/-7/7
+set REGION1 = 0/$L/$26/$27
 set SIZE1 = 17.0c/2.0c
+set div_x = $18
+set grid_x = $19
+set div_y1 = $20
+set grid_y1 = $21
+set div_y2 = $22
+set grid_y2 = $23
 
-set REGION2 = 0/$L/-700/0
-set AXIS2 = a100g50:"Distancia\040(km)":/a100.0g50.0:"Profundidad\040(km)":SW
+set REGION2 = 0/$L/$24/$25
+set AXIS2 = "a{$div_x}g{$grid_x}:"$Label_x":/a${div_y1}g{$grid_y1}:"$Label_y1":SW"
 set SIZE2 = 17.0c/7.0c
 
 set N = `awk 'END {print NR}' $file_coord` # Numero de filas del archivo.
@@ -112,7 +136,7 @@ while ($i <= $N)
         set p1 = $lon0/$lat0        # Punto 1 (WE): (Longitud, Latitud)
         set p2 = $lonf/$latf        # Punto 2 (WE): (Longitud, Latitud)
         set W_mitad = $W_2         # Ancho del perfil/2 (W = 400 km corresponde a  W_mitad = 200)
-        set AXIS1 = a100g50:."Perfil\040AA\47\040(Norte\040de\040Per\372)":/a7.0g7.0:"H\040(km)":W
+        set AXIS1 = a{$div_x}g{$grid_x}:."$Titulo_perfil_norte":/a{$div_y2}g{$grid_y2}:"$Label_y2":W
         set psfile  = perfil_sismicidad_norte.ps
         set epsfile = perfil_sismicidad_norte.eps
     endif
@@ -121,7 +145,7 @@ while ($i <= $N)
         set p1 = $lon0/$lat0        # Punto 1 (WE): (Longitud, Latitud)
         set p2 = $lonf/$latf        # Punto 2 (WE): (Longitud, Latitud)
         set W_mitad = $W_2         # Ancho del perfil/2 (W = 400 km corresponde a  W_mitad = 200)
-        set AXIS1 = a100g50:."Perfil\040BB\47\040(Centro\040de\040Per\372)":/a7.0g7.0:"H\040(km)":W
+        set AXIS1 = a{$div_x}g{$grid_x}:."$Titulo_perfil_centro":/a{$div_y2}g{$grid_y2}:"$Label_y2":W
         set psfile  = perfil_sismicidad_centro.ps
         set epsfile = perfil_sismicidad_centro.eps
     endif
@@ -130,7 +154,7 @@ while ($i <= $N)
         set p1 = $lon0/$lat0        # Punto 1 (WE): (Longitud, Latitud)
         set p2 = $lonf/$latf        # Punto 2 (WE): (Longitud, Latitud)
         set W_mitad = $W_2          # Ancho del perfil/2 (W = 400 km corresponde a  W_mitad = 200)
-        set AXIS1 = a100g50:."Perfil\040CC\47\040(Sur\040de\040Per\372)":/a7.0g7.0:"H\040(km)":W
+        set AXIS1 = a{$div_x}g{$grid_x}:."$Titulo_perfil_sur":/a{$div_y2}g{$grid_y2}:"$Label_y2":W
         set psfile  = perfil_sismicidad_sur.ps
         set epsfile = perfil_sismicidad_sur.eps
     endif
@@ -148,11 +172,22 @@ grdtrack $linea_perfil -G$grdfile | awk '{print $3, $4 }' > $linea_topo_bati
 psbasemap -JX$SIZE1 -R$REGION1 -B$AXIS1 -P -K -X3.0c -Y15.0c  > $psfile
 awk '{print $1,$2*0.001 }' $linea_topo_bati | psxy -R$REGION1 -JX$SIZE1 -W4/10/10/10 -K -O -P >> $psfile
 
-########################### Texto (SW, NE) ###################################
-set L1 = `echo "scale=2; $L-20.0" | bc`               # Operación para ubicar el texto "NE".
-echo -20 10 12 0 0 5 SW | pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
-echo $L1 10 12 0 0 5 NE | pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
+################# Texto (SW, NE) - Ahora es: AA', BB', CC' ###################
+set L1 = `echo "scale=2; $L-20.0" | bc`  # Operación para ubicar el texto "NE" (Ahora es: AA', BB', CC').
+if ($perfil_region == 'norte') then
+    echo 0 10 12 0 0 5 "A" | pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
+    echo $L1 10 12 0 0 5 "A\47" | pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
+endif
 
+if ($perfil_region == 'centro') then
+    echo 0 10 12 0 0 5 "B" | pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
+    echo $L1 10 12 0 0 5 "B\47" | pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
+endif
+
+if ($perfil_region == 'sur') then
+    echo 0 10 12 0 0 5 "C" | pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
+    echo $L1 10 12 0 0 5 "C\47" | pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
+endif
 ############ Perfil de Sismos (Longitud, Latitud, Profundidad) ###############
 psbasemap -JX$SIZE2 -R$REGION2 -B$AXIS2 -P -K -X0 -Y-7.5c -O >> $psfile
 
@@ -180,11 +215,11 @@ if ($leyenda == 'si' && $mostrar_sup == 'si' && $mostrar_int == 'si' && $mostrar
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO_leyenda
 D 0 1p
-S 0.1i c 0.1i red 0.25p 0.2i Superficial: 0-60 km
+S 0.1i c 0.1i red 0.25p 0.2i $Texto_leyenda_01
 V 0 1p
-S 0.1i c 0.1i yellow 0.25p 0.2i Intermedio: 60-300 km
+S 0.1i c 0.1i yellow 0.25p 0.2i $Texto_leyenda_02
 V 0 1p
-S 0.1i c 0.1i blue 0.25p 0.2i Profundo: 300-700 km
+S 0.1i c 0.1i blue 0.25p 0.2i $Texto_leyenda_03
 >
 END
 endif
@@ -193,9 +228,9 @@ if ($leyenda == 'si' && $mostrar_sup == 'si' && $mostrar_int == 'si' && $mostrar
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO_leyenda
 D 0 1p
-S 0.1i c 0.1i red 0.25p 0.2i Superficial: 0-60 km
+S 0.1i c 0.1i red 0.25p 0.2i $Texto_leyenda_01
 V 0 1p
-S 0.1i c 0.1i yellow 0.25p 0.2i Intermedio: 60-300 km
+S 0.1i c 0.1i yellow 0.25p 0.2i $Texto_leyenda_02
 >
 END
 endif
@@ -204,9 +239,9 @@ if ($leyenda == 'si' && $mostrar_sup == 'si' && $mostrar_int == 'no' && $mostrar
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO_leyenda
 D 0 1p
-S 0.1i c 0.1i red 0.25p 0.2i Superficial: 0-60 km
+S 0.1i c 0.1i red 0.25p 0.2i $Texto_leyenda_01
 V 0 1p
-S 0.1i c 0.1i blue 0.25p 0.2i Profundo: 300-700 km
+S 0.1i c 0.1i blue 0.25p 0.2i $Texto_leyenda_03
 >
 END
 endif
@@ -215,7 +250,7 @@ if ($leyenda == 'si' && $mostrar_sup == 'si' && $mostrar_int == 'no' && $mostrar
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO_leyenda
 D 0 1p
-S 0.1i c 0.1i red 0.25p 0.2i Superficial: 0-60 km
+S 0.1i c 0.1i red 0.25p 0.2i $Texto_leyenda_01
 >
 END
 endif
@@ -224,9 +259,9 @@ if ($leyenda == 'si' && $mostrar_sup == 'no' && $mostrar_int == 'si' && $mostrar
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO_leyenda
 D 0 1p
-S 0.1i c 0.1i yellow 0.25p 0.2i Intermedio: 60-300 km
+S 0.1i c 0.1i yellow 0.25p 0.2i $Texto_leyenda_02
 V 0 1p
-S 0.1i c 0.1i blue 0.25p 0.2i Profundo: 300-700 km
+S 0.1i c 0.1i blue 0.25p 0.2i $Texto_leyenda_03
 >
 END
 endif
@@ -235,7 +270,7 @@ if ($leyenda == 'si' && $mostrar_sup == 'no' && $mostrar_int == 'si' && $mostrar
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO_leyenda
 D 0 1p
-S 0.1i c 0.1i yellow 0.25p 0.2i Intermedio: 60-300 km
+S 0.1i c 0.1i yellow 0.25p 0.2i $Texto_leyenda_02
 >
 END
 endif
@@ -244,7 +279,7 @@ if ($leyenda == 'si' && $mostrar_sup == 'no' && $mostrar_int == 'no' && $mostrar
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO_leyenda
 D 0 1p
-S 0.1i c 0.1i blue 0.25p 0.2i Profundo: 300-700 km
+S 0.1i c 0.1i blue 0.25p 0.2i $Texto_leyenda_03
 >
 END
 endif

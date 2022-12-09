@@ -3,10 +3,10 @@
 #==================================================================================
 echo ""
 echo "+==========================================================================+"
-echo "|                           SISMICIDAD v1.0.0                              |"
+echo "|                           SISMICIDAD v1.1.0                              |"
 echo "+==========================================================================+"
 echo "| -Generar un mapa de sismicidad en el Perú (a partir del cat. del NEIC)   |"
-echo "| -Ultima actualizacion: 16/07/2020                                        |"
+echo "| -Ultima actualizacion: 16/10/2020                                        |"
 echo "| -Basado en los scripts de Cesar Jimenez y Cristobal Condori              |"
 echo "+--------------------------------------------------------------------------+"
 echo "| -Copyright (C) 2020  Nestor Luna Diaz                                    |"
@@ -51,9 +51,6 @@ set txt_pro = sismos_profundos.txt
 
 set psfile  = sismicidad.ps
 set epsfile = sismicidad.eps
-set cptfile = depth.cpt
-
-makecpt -Cglobe > $cptfile
 
 ############################ Límites de los mapas  ###########################
 set LAT1_1 = $13
@@ -61,7 +58,7 @@ set LAT2_1 = $14
 set LON1_1 = $15
 set LON2_1 = $16
 set REGION1 = $LON2_1/$LON1_1/$LAT1_1/$LAT2_1
-set AXIS1 = a4f2/a4f2WeSn
+set AXIS1 = a$29f$30/a$31f$32WeSn
 set SIZE1 = M15c
 
 set LAT1_2 = $17
@@ -92,15 +89,72 @@ set lim_dptos_gmt = $6      # Variables: 'si', 'no' (mostrar dptos de gmt, no mo
 set nombres_dptos = $7      # Variables: 'si', 'no' (mostrar nombres de dptos, no mostrar nombres de dptos).
 set nombres_paises = $8     # Variables: 'si', 'no' (mostrar nombres de paises, no mostrar nombres de paises).
 set nombre_oceano = $9      # Variables: 'si', 'no' (mostrar nombre de oceano, no mostrar nombre de oceano).
+set nombre_fosa = $43       # Variables: 'si', 'no' (mostrar el nombre de la fosa).
+set nombre_dorsal = $44     # Variables: 'si', 'no' (mostrar el nombre de la dorsal de nazca).
+set nombre_mendana = $45    # Variables: 'si', 'no' (mostrar el nombre de la fractura de mendaña).
 
 set mostrar_sup  = $25     # Variables: 'si', 'no' (Graficar sismos superficiales, no graficar).
 set mostrar_int  = $26     # Variables: 'si', 'no' (Graficar sismos intermedios, no graficar).
 set mostrar_prof = $27     # Variables: 'si', 'no' (Graficar sismos profundos, no graficar).
 
+set usar_cpt_file = $33    # Valores: 'si', 'no' (utilizar un cpt personalizado).
+set usar_escala = $35
+set LAT_escala = $36
+set LON_escala = $37
+set VAL_escala = $38
+
+set LAT_oceano = $39
+set LON_oceano = $40
+set VAL_angulo_oceano = $41
+set TITULO_oceano_pre = $42
+set TITULO_oceano = `echo $TITULO_oceano_pre | tr "%" " "`
+
+set LAT_fosa = $46
+set LON_fosa = $47
+set VAL_angulo_fosa = $48
+set TITULO_fosa_pre = $49
+set TITULO_fosa = `echo $TITULO_fosa_pre | tr "%" " "`
+
+set LAT_dorsal = $50
+set LON_dorsal = $51
+set VAL_angulo_dorsal = $52
+set TITULO_dorsal_pre = $53
+set TITULO_dorsal = `echo $TITULO_dorsal_pre | tr "%" " "`
+
+set LAT_mendana = $54
+set LON_mendana = $55
+set VAL_angulo_mendana = $56
+set TITULO_mendana_pre = $57
+set TITULO_mendana = `echo $TITULO_mendana_pre | tr "%" " "`
+
+set Texto_leyenda_01_pre = $58
+set Texto_leyenda_01 = `echo $Texto_leyenda_01_pre | tr "%" " "`
+
+set Texto_leyenda_02_pre = $59
+set Texto_leyenda_02 = `echo $Texto_leyenda_02_pre | tr "%" " "`
+
+set Texto_leyenda_03_pre = $60
+set Texto_leyenda_03 = `echo $Texto_leyenda_03_pre | tr "%" " "`
+
+set Texto2_leyenda_01_pre = $61
+set Texto2_leyenda_01 = `echo $Texto2_leyenda_01_pre | tr "%" " "`
+
+set Texto2_leyenda_02_pre = $62
+set Texto2_leyenda_02 = `echo $Texto2_leyenda_02_pre | tr "%" " "`
+
 gmtset ANOT_FONT_SIZE 12
 gmtset LABEL_FONT_SIZE 14
 gmtset HEADER_FONT_SIZE 14
 gmtset PAPER_MEDIA A4
+
+################ Generar/Utilizar archivo CPT  ###############################
+if ($usar_cpt_file == 'si') then
+    set cptfile = $34
+    else
+        set cptfile = depth.cpt
+        makecpt -Cglobe > $cptfile
+endif
+##############################################################################
 
 ########### Separar sismos: superficiales, intermedios, profundos ############
 cat $CATALOGO | awk '{if ($4 <= 60.0) print $1,$2,$3,$4,$5}' > $txt_sup
@@ -108,43 +162,81 @@ cat $CATALOGO | awk '{if ($4>60.0 && $4<=300.0) print $1,$2,$3,$4,$5}' > $txt_in
 cat $CATALOGO | awk '{if ($4 > 300.0) print $1,$2,$3,$4,$5}' > $txt_pro
 
 ################# Sin topografía y batimetría  ###############################
-if ($topo_bati == 1) then
-    psbasemap -R$REGION1 -J$SIZE1 -B$AXIS1 -X3.0c -Y5.0c -P -K -V > $psfile
-    if ($lim_dptos_gmt == 'si') then
-        pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Lf-82.5/-16.3/-82.5/15.3/200+lkm -S120/180/225 -G220/220/220 -Df -W1 -Na -P -K -V -O >> $psfile
-        else
-            pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Lf-82.5/-16.3/-82.5/15.3/200+lkm -S120/180/225 -G220/220/220 -Df -W1 -N1 -P -K -V -O >> $psfile
+if ($usar_escala == 'si') then
+    if ($topo_bati == 1) then
+        psbasemap -R$REGION1 -J$SIZE1 -B$AXIS1 -X3.0c -Y5.0c -P -K -V > $psfile
+        if ($lim_dptos_gmt == 'si') then
+            pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Lf$LON_escala/$LAT_escala/$LON_escala/15.3/$VAL_escala+lkm -S120/180/225 -G220/220/220 -Df -W1 -N1/3 -N2 -N3 -P -K -V -O >> $psfile
+            else
+                pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Lf$LON_escala/$LAT_escala/$LON_escala/15.3/$VAL_escala+lkm -S120/180/225 -G220/220/220 -Df -W1 -N1/3 -P -K -V -O >> $psfile
+        endif
+    endif
+    else
+    if ($topo_bati == 1) then
+        psbasemap -R$REGION1 -J$SIZE1 -B$AXIS1 -X3.0c -Y5.0c -P -K -V > $psfile
+        if ($lim_dptos_gmt == 'si') then
+            pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -S120/180/225 -G220/220/220 -Df -W1 -N1/3 -N2 -N3 -P -K -V -O >> $psfile
+            else
+                pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -S120/180/225 -G220/220/220 -Df -W1 -N1/3 -P -K -V -O >> $psfile
+        endif
     endif
 endif
 ##############################################################################
 
 ############### Topografía y batimetría simple ###############################
-if ($topo_bati == 2) then
-    grdimage $grdfile -R$REGION1 -J$SIZE1 -C$cptfile -X3.0c -Y5.0c -P -K -V > ! $psfile
-    if ($lim_dptos_gmt == 'si') then
-        pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Lf-82.5/-16.3/-82.5/15.3/200+lkm -Df -W1 -Na -P -K -V -O >> $psfile
-        else
-            pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Lf-82.5/-16.3/-82.5/15.3/200+lkm -Df -W1 -N1 -P -K -V -O >> $psfile
+if ($usar_escala == 'si') then
+    if ($topo_bati == 2) then
+        grdimage $grdfile -R$REGION1 -J$SIZE1 -C$cptfile -X3.0c -Y5.0c -P -K -V > ! $psfile
+        if ($lim_dptos_gmt == 'si') then
+            pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Lf$LON_escala/$LAT_escala/$LON_escala/15.3/$VAL_escala+lkm -Df -W1 -N1/3 -N2 -N3 -P -K -V -O >> $psfile
+            else
+                pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Lf$LON_escala/$LAT_escala/$LON_escala/15.3/$VAL_escala+lkm -Df -W1 -N1/3 -P -K -V -O >> $psfile
+        endif
+        if ($escala_color == 1) then
+            psscale -C$cptfile -D7.5/-1.0/12c/0.4ch -B4000/:m: -O -K -V  >> $psfile
+        endif
     endif
-    if ($escala_color == 1) then
-        psscale -C$cptfile -D7.5/-1.0/12c/0.4ch -B4000/:m: -O -K -V  >> $psfile
+    else
+    if ($topo_bati == 2) then
+        grdimage $grdfile -R$REGION1 -J$SIZE1 -C$cptfile -X3.0c -Y5.0c -P -K -V > ! $psfile
+        if ($lim_dptos_gmt == 'si') then
+            pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Df -W1 -N1/3 -N2 -N3 -P -K -V -O >> $psfile
+            else
+                pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Df -W1 -N1/3 -P -K -V -O >> $psfile
+        endif
+        if ($escala_color == 1) then
+            psscale -C$cptfile -D7.5/-1.0/12c/0.4ch -B4000/:m: -O -K -V  >> $psfile
+        endif
     endif
 endif
 ##############################################################################
 
 ############ Topografía y batimetría con gradiente ###########################
-if ($topo_bati == 3) then
-    grdimage $grdfile -R$REGION1 -J$SIZE1 -C$cptfile -I$grdgrad -X3.0c -Y5.0c -P -K -V > ! $psfile
-    if ($lim_dptos_gmt == 'si') then
-        pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Lf-82.5/-16.3/-82.5/15.3/200+lkm -Df -W1 -Na -P -K -V -O >> $psfile
-        else
-            pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Lf-82.5/-16.3/-82.5/15.3/200+lkm -Df -W1 -N1 -P -K -V -O >> $psfile
+if ($usar_escala == 'si') then
+    if ($topo_bati == 3) then
+        grdimage $grdfile -R$REGION1 -J$SIZE1 -C$cptfile -I$grdgrad -X3.0c -Y5.0c -P -K -V > ! $psfile
+        if ($lim_dptos_gmt == 'si') then
+            pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Lf$LON_escala/$LAT_escala/$LON_escala/15.3/$VAL_escala+lkm -Df -W1 -N1/3 -N2 -N3 -P -K -V -O >> $psfile
+            else
+                pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Lf$LON_escala/$LAT_escala/$LON_escala/15.3/$VAL_escala+lkm -Df -W1 -N1/3 -P -K -V -O >> $psfile
+        endif
+        if ($escala_color == 1) then
+            psscale -C$cptfile -D7.5/-1.0/12c/0.4ch -B4000/:m: -O -K -V  >> $psfile
+        endif
     endif
-    if ($escala_color == 1) then
-        psscale -C$cptfile -D7.5/-1.0/12c/0.4ch -B4000/:m: -O -K -V  >> $psfile
+    else
+    if ($topo_bati == 3) then
+        grdimage $grdfile -R$REGION1 -J$SIZE1 -C$cptfile -I$grdgrad -X3.0c -Y5.0c -P -K -V > ! $psfile
+        if ($lim_dptos_gmt == 'si') then
+            pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Df -W1 -N1/3 -N2 -N3 -P -K -V -O >> $psfile
+            else
+                pscoast -J$SIZE1 -R$REGION1 -B$AXIS1 -Df -W1 -N1/3 -P -K -V -O >> $psfile
+        endif
+        if ($escala_color == 1) then
+            psscale -C$cptfile -D7.5/-1.0/12c/0.4ch -B4000/:m: -O -K -V  >> $psfile
+        endif
     endif
 endif
-
 ###################### Departamentos Perú ####################################
 if ($lim_dptos_ext == 'si') then
     awk '{print $1, $2}' $folder/deptos.dat | psxy -R -J -M -W1 -O -P -K >> $psfile
@@ -197,8 +289,12 @@ pstext -R -JM -Wwhite -O -K <<EOF>> $psfile
 -77.08 -11.90 12 0 1 LT Lima
 #-76.18 -13.71 12 0 1 LT Pisco
 -75.60 -14.3 12 0 1 LT Ica
--71.54 -16.40 12 0 1 LT Arequipa
--71.00 -17.70 12 0 1 LT Tacna
+-73.04 -15.60 12 0 1 LT Arequipa
+#-71.40 -16.90 12 0 1 LT Moquegua
+-70.60 -17.70 12 0 1 LT Tacna
+#-70.20 -18.60 12 0 1 LT Arica
+#-70.00 -20.00 12 0 1 LT Iquique
+#-70.00 -22.50 12 0 1 LT Antofagasta
 EOF
 endif
 
@@ -215,8 +311,30 @@ endif
 
 if ($nombre_oceano == 'si') then
 pstext -R -JM -P -O -V -K <<EOF>> $psfile
--82.5 -12.0 14 305 1 LT OC\311ANO PAC\315FICO
+$LON_oceano $LAT_oceano 14 $VAL_angulo_oceano 1 LT $TITULO_oceano
 EOF
+#-82.5 -12.0 14 305 1 LT OC\311ANO PAC\315FICO
+endif
+
+if ($nombre_fosa == 'si') then
+pstext -R -JM -P -O -V -K <<EOF>> $psfile
+$LON_fosa $LAT_fosa 12 $VAL_angulo_fosa 1 LT $TITULO_fosa
+EOF
+#-80.0 -11.7 12 306 1 LT Fosa Peruana
+endif
+
+if ($nombre_dorsal == 'si') then
+pstext -R -JM -P -O -V -K <<EOF>> $psfile
+$LON_dorsal $LAT_dorsal 12 $VAL_angulo_dorsal 1 LT $TITULO_dorsal
+EOF
+#-79.0 -20.0 12 47 1 LT Dorsal de Nazca
+endif
+
+if ($nombre_mendana == 'si') then
+pstext -R -JM -P -O -V -K <<EOF>> $psfile
+$LON_mendana $LAT_mendana 12 $VAL_angulo_mendana 1 LT $TITULO_mendana
+EOF
+#-84.0 -13.0 12 30 1 LT Fractura de Menda\361a
 endif
 
 ################################# Mini-mapa ##################################
@@ -229,7 +347,7 @@ if ($mini_mapa == 'si') then
 #-70.49  01.00
 #EOF
 
-pscoast -J$SIZE2 -R$REGION2 -Df -W1 -N1 -T-42.2/-48.8/1.4 -G180 -S120/180/225 -O -V -X11.95 -Y15.25 -K >> $psfile
+pscoast -J$SIZE2 -R$REGION2 -Di -W1 -N1 -T-42.2/-48.8/1.4 -G180 -S120/180/225 -O -V -X11.95 -Y15.25 -K >> $psfile
 
 psxy -R$REGION2 -J$SIZE2 -W5,255/0/0 -P -O -V -K <<EOF>> $psfile
 $LON2_1  $LAT2_1
@@ -253,11 +371,11 @@ if ($leyenda == 1 && $mostrar_sup == 'si' && $mostrar_int == 'si' && $mostrar_pr
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION1 -J$SIZE1 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO
 D 0 1p
-S 0.1i c 0.1i red 0.25p 0.2i Superficial: 0-60 km
+S 0.1i c 0.1i red 0.25p 0.2i $Texto_leyenda_01
 V 0 1p
-S 0.1i c 0.1i yellow 0.25p 0.2i Intermedio: 60-300 km
+S 0.1i c 0.1i yellow 0.25p 0.2i $Texto_leyenda_02
 V 0 1p
-S 0.1i c 0.1i blue 0.25p 0.2i Profundo: 300-700 km
+S 0.1i c 0.1i blue 0.25p 0.2i $Texto_leyenda_03
 >
 END
 endif
@@ -266,9 +384,9 @@ if ($leyenda == 1 && $mostrar_sup == 'si' && $mostrar_int == 'si' && $mostrar_pr
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION1 -J$SIZE1 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO
 D 0 1p
-S 0.1i c 0.1i red 0.25p 0.2i Superficial: 0-60 km
+S 0.1i c 0.1i red 0.25p 0.2i $Texto_leyenda_01
 V 0 1p
-S 0.1i c 0.1i yellow 0.25p 0.2i Intermedio: 60-300 km
+S 0.1i c 0.1i yellow 0.25p 0.2i $Texto_leyenda_02
 >
 END
 endif
@@ -277,9 +395,9 @@ if ($leyenda == 1 && $mostrar_sup == 'si' && $mostrar_int == 'no' && $mostrar_pr
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION1 -J$SIZE1 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO
 D 0 1p
-S 0.1i c 0.1i red 0.25p 0.2i Superficial: 0-60 km
+S 0.1i c 0.1i red 0.25p 0.2i $Texto_leyenda_01
 V 0 1p
-S 0.1i c 0.1i blue 0.25p 0.2i Profundo: 300-700 km
+S 0.1i c 0.1i blue 0.25p 0.2i $Texto_leyenda_03
 >
 END
 endif
@@ -288,7 +406,7 @@ if ($leyenda == 1 && $mostrar_sup == 'si' && $mostrar_int == 'no' && $mostrar_pr
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION1 -J$SIZE1 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO
 D 0 1p
-S 0.1i c 0.1i red 0.25p 0.2i Superficial: 0-60 km
+S 0.1i c 0.1i red 0.25p 0.2i $Texto_leyenda_01
 >
 END
 endif
@@ -297,9 +415,9 @@ if ($leyenda == 1 && $mostrar_sup == 'no' && $mostrar_int == 'si' && $mostrar_pr
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION1 -J$SIZE1 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO
 D 0 1p
-S 0.1i c 0.1i yellow 0.25p 0.2i Intermedio: 60-300 km
+S 0.1i c 0.1i yellow 0.25p 0.2i $Texto_leyenda_02
 V 0 1p
-S 0.1i c 0.1i blue 0.25p 0.2i Profundo: 300-700 km
+S 0.1i c 0.1i blue 0.25p 0.2i $Texto_leyenda_03
 >
 END
 endif
@@ -308,7 +426,7 @@ if ($leyenda == 1 && $mostrar_sup == 'no' && $mostrar_int == 'si' && $mostrar_pr
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION1 -J$SIZE1 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO
 D 0 1p
-S 0.1i c 0.1i yellow 0.25p 0.2i Intermedio: 60-300 km
+S 0.1i c 0.1i yellow 0.25p 0.2i $Texto_leyenda_02
 >
 END
 endif
@@ -317,7 +435,7 @@ if ($leyenda == 1 && $mostrar_sup == 'no' && $mostrar_int == 'no' && $mostrar_pr
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION1 -J$SIZE1 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO
 D 0 1p
-S 0.1i c 0.1i blue 0.25p 0.2i Profundo: 300-700 km
+S 0.1i c 0.1i blue 0.25p 0.2i $Texto_leyenda_03
 >
 END
 endif
@@ -335,7 +453,7 @@ if ($leyenda == 2 && $mostrar_sup == 'si' && $mostrar_int == 'si' && $mostrar_pr
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION1 -J$SIZE1 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO
 D 0 1p
-H 11 0 Magnitud                  Profundidad
+H 11 0 $Texto2_leyenda_01                  $Texto2_leyenda_02
 G 0.1
 N 3
 S 0.35c c 0.2c gray   0.4p 0.30i > 4.0
@@ -358,7 +476,7 @@ if ($leyenda == 2 && $mostrar_sup == 'si' && $mostrar_int == 'si' && $mostrar_pr
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION1 -J$SIZE1 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO
 D 0 1p
-H 11 0 Magnitud                  Profundidad
+H 11 0 $Texto2_leyenda_01                  $Texto2_leyenda_02
 G 0.1
 N 3
 S 0.35c c 0.2c gray   0.4p 0.30i > 4.0
@@ -380,7 +498,7 @@ if ($leyenda == 2 && $mostrar_sup == 'si' && $mostrar_int == 'no' && $mostrar_pr
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION1 -J$SIZE1 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO
 D 0 1p
-H 11 0 Magnitud                  Profundidad
+H 11 0 $Texto2_leyenda_01                  $Texto2_leyenda_02
 G 0.1
 N 3
 S 0.35c c 0.2c gray   0.4p 0.30i > 4.0
@@ -402,7 +520,7 @@ if ($leyenda == 2 && $mostrar_sup == 'si' && $mostrar_int == 'no' && $mostrar_pr
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION1 -J$SIZE1 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO
 D 0 1p
-H 11 0 Magnitud                  Profundidad
+H 11 0 $Texto2_leyenda_01                  $Texto2_leyenda_02
 G 0.1
 N 3
 S 0.35c c 0.2c gray   0.4p 0.30i > 4.0
@@ -423,7 +541,7 @@ if ($leyenda == 2 && $mostrar_sup == 'no' && $mostrar_int == 'si' && $mostrar_pr
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION1 -J$SIZE1 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO
 D 0 1p
-H 11 0 Magnitud                  Profundidad
+H 11 0 $Texto2_leyenda_01                  $Texto2_leyenda_02
 G 0.1
 N 3
 S 0.35c c 0.2c gray   0.4p 0.30i > 4.0
@@ -445,7 +563,7 @@ if ($leyenda == 2 && $mostrar_sup == 'no' && $mostrar_int == 'si' && $mostrar_pr
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION1 -J$SIZE1 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO
 D 0 1p
-H 11 0 Magnitud                  Profundidad
+H 11 0 $Texto2_leyenda_01                  $Texto2_leyenda_02
 G 0.1
 N 3
 S 0.35c c 0.2c gray   0.4p 0.30i > 4.0
@@ -466,7 +584,7 @@ if ($leyenda == 2 && $mostrar_sup == 'no' && $mostrar_int == 'no' && $mostrar_pr
 pslegend <<END -Dx$SIZE_LEYENDA -R$REGION1 -J$SIZE1 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO
 D 0 1p
-H 11 0 Magnitud                  Profundidad
+H 11 0 $Texto2_leyenda_01                  $Texto2_leyenda_02
 G 0.1
 N 3
 S 0.35c c 0.2c gray   0.4p 0.30i > 4.0
@@ -485,5 +603,5 @@ endif
 
 ################################ Finalizando #################################
 ps2eps $psfile -f
-rm $cptfile $psfile
+rm $psfile
 evince $epsfile &

@@ -7,19 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>900</width>
-    <height>600</height>
+    <height>635</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>900</width>
-    <height>600</height>
+    <height>635</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>900</width>
-    <height>600</height>
+    <height>635</height>
    </size>
   </property>
   <property name="font">
@@ -33,7 +33,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="Recursos/logos.qrc">
-    <normaloff>:/icono/semiconductor.png</normaloff>:/icono/semiconductor.png</iconset>
+    <normaloff>:/icono/logo_sismo_blanco.svg</normaloff>:/icono/logo_sismo_blanco.svg</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -45,7 +45,7 @@
    <widget class="QLabel" name="Titulo_programa">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>280</x>
       <y>8</y>
       <width>261</width>
       <height>31</height>
@@ -89,7 +89,7 @@
     <property name="geometry">
      <rect>
       <x>793</x>
-      <y>563</y>
+      <y>595</y>
       <width>88</width>
       <height>34</height>
      </rect>
@@ -122,12 +122,12 @@
      <rect>
       <x>10</x>
       <y>4</y>
-      <width>180</width>
+      <width>261</width>
       <height>34</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/logo_final/logo_final.png);
+     <string notr="true">border-image: url(:/logo_final/Logo_SpectralSOURCE.svg);
 background-color: transparent;</string>
     </property>
     <property name="text">
@@ -138,7 +138,7 @@ background-color: transparent;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>566</y>
+      <y>595</y>
       <width>281</width>
       <height>31</height>
      </rect>
@@ -163,7 +163,7 @@ background-color: transparent;</string>
       <x>20</x>
       <y>40</y>
       <width>861</width>
-      <height>520</height>
+      <height>551</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -182,19 +182,19 @@ background-color: transparent;</string>
         <x>0</x>
         <y>0</y>
         <width>851</width>
-        <height>481</height>
+        <height>511</height>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Box_Archivos_externos">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>851</width>
-         <height>417</height>
+         <width>96</width>
+         <height>26</height>
         </rect>
        </property>
        <attribute name="label">
@@ -375,7 +375,7 @@ p, li { white-space: pre-wrap; }
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>400</y>
+          <y>390</y>
           <width>381</width>
           <height>21</height>
          </rect>
@@ -483,14 +483,73 @@ p, li { white-space: pre-wrap; }
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Noto Sans';&quot;&gt;*(&lt;/span&gt;deptos.dat, Fosa.dat, Mendana.gmt, Nazca.dat)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
+       <widget class="QTextBrowser" name="ruta_cpt_file">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>300</y>
+          <width>680</width>
+          <height>34</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Boton_examinar_6">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>720</x>
+          <y>300</y>
+          <width>111</width>
+          <height>34</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Examinar</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titulo_5">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>270</y>
+          <width>340</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Paytone One</family>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ruta de paleta de colores personalizada (CPT)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="Box_Parametros">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>96</width>
-         <height>26</height>
+         <width>851</width>
+         <height>415</height>
         </rect>
        </property>
        <attribute name="label">
@@ -966,31 +1025,6 @@ p, li { white-space: pre-wrap; }
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Coordenadas del mapa:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
-       <widget class="QCheckBox" name="check_nombres_oceano">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>290</y>
-          <width>240</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Nombre del Océano Pacífico</string>
-        </property>
-        <property name="checkable">
-         <bool>true</bool>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-        <property name="tristate">
-         <bool>false</bool>
-        </property>
-       </widget>
        <widget class="QCheckBox" name="check_lim_dptos_gmt">
         <property name="enabled">
          <bool>false</bool>
@@ -1439,7 +1473,7 @@ p, li { white-space: pre-wrap; }
          </font>
         </property>
         <property name="text">
-         <string>Graficar Sismicidad</string>
+         <string>1. Graficar Sismicidad</string>
         </property>
        </widget>
        <widget class="Line" name="linea_2">
@@ -1525,6 +1559,1510 @@ p, li { white-space: pre-wrap; }
         </property>
        </widget>
       </widget>
+      <widget class="QWidget" name="page">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>96</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>3) Opciones avanzadas</string>
+       </attribute>
+       <widget class="QFrame" name="frame">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>223</width>
+          <height>209</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QDoubleSpinBox" name="val_LON1_5">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>120</y>
+           <width>71</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>-180.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>180.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>-82.500000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="val_angulo_oce">
+         <property name="geometry">
+          <rect>
+           <x>135</x>
+           <y>170</y>
+           <width>80</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>-360.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>360.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>305.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_lon01_4">
+         <property name="geometry">
+          <rect>
+           <x>135</x>
+           <y>100</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>FreeSans</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lon 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_lat01_4">
+         <property name="geometry">
+          <rect>
+           <x>35</x>
+           <y>100</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>FreeSans</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lat 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Titulo_19">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>211</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Paytone One</family>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Coordenadas:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_ang_oce">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>120</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Noto Sans</family>
+           <pointsize>10</pointsize>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>Ángulo de incl. (°)</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="val_LAT1_5">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>120</y>
+           <width>71</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>-90.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>90.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>-12.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QPlainTextEdit" name="Titulo_oceano">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>35</y>
+           <width>201</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="plainText">
+          <string>OCÉANO PACÍFICO</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="check_nombres_oceano">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>5</y>
+           <width>240</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Nombre del Océano</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <property name="tristate">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_2">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>0</y>
+          <width>223</width>
+          <height>209</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="Text_lon01_3">
+         <property name="geometry">
+          <rect>
+           <x>135</x>
+           <y>100</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>FreeSans</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lon 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="val_LON1_4">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>120</y>
+           <width>71</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>-180.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>180.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>-80.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="val_angulo_fosa">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>135</x>
+           <y>170</y>
+           <width>80</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>-360.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>360.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>306.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="val_LAT1_4">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>120</y>
+           <width>71</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>-90.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>90.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>-11.699999999999999</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_ang_fosa">
+         <property name="geometry">
+          <rect>
+           <x>12</x>
+           <y>170</y>
+           <width>120</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Noto Sans</family>
+           <pointsize>10</pointsize>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>Ángulo de incl. (°)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Titulo_18">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>211</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Paytone One</family>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Coordenadas:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_lat01_3">
+         <property name="geometry">
+          <rect>
+           <x>35</x>
+           <y>100</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>FreeSans</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lat 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="check_nombres_fosa">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>5</y>
+           <width>240</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Nombre de la fosa</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <property name="tristate">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QPlainTextEdit" name="Titulo_fosa">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>35</y>
+           <width>201</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="plainText">
+          <string>Fosa peruana</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_3">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>206</y>
+          <width>223</width>
+          <height>209</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QDoubleSpinBox" name="val_LAT1_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>80</y>
+           <width>71</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>-90.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>90.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>-19.800000000000001</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Titulo_9">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>211</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Paytone One</family>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Coordenadas:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_lat01_2">
+         <property name="geometry">
+          <rect>
+           <x>35</x>
+           <y>60</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>FreeSans</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lat 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_escala_mapa">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>135</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Noto Sans</family>
+           <pointsize>10</pointsize>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>Valor de escala (km)</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Box_escala_mapa">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>145</x>
+           <y>170</y>
+           <width>71</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>100</number>
+         </property>
+         <property name="maximum">
+          <number>10000</number>
+         </property>
+         <property name="value">
+          <number>200</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_lon01_2">
+         <property name="geometry">
+          <rect>
+           <x>135</x>
+           <y>60</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>FreeSans</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lon 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="val_LON1_3">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>80</y>
+           <width>71</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>-180.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>180.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>-74.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="check_escala_mapa">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>5</y>
+           <width>240</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Mostrar escala de mapa</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <property name="tristate">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_4">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>206</y>
+          <width>223</width>
+          <height>209</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QDoubleSpinBox" name="val_LON1_7">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>120</y>
+           <width>71</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>-180.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>180.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>-84.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="val_angulo_mend">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>135</x>
+           <y>170</y>
+           <width>80</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>-360.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>360.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>30.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_lon01_6">
+         <property name="geometry">
+          <rect>
+           <x>135</x>
+           <y>100</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>FreeSans</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lon 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_lat01_6">
+         <property name="geometry">
+          <rect>
+           <x>35</x>
+           <y>100</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>FreeSans</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lat 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Titulo_21">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>211</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Paytone One</family>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Coordenadas:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_ang_mendana">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>120</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Noto Sans</family>
+           <pointsize>10</pointsize>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>Ángulo de incl. (°)</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="val_LAT1_7">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>120</y>
+           <width>71</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>-90.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>90.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>-13.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="check_mendana_2">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>5</y>
+           <width>240</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Nombre de Fract. Mendaña</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <property name="tristate">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QPlainTextEdit" name="Titulo_mendana">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>35</y>
+           <width>201</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="plainText">
+          <string>Fractura de Mendaña</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_5">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>0</y>
+          <width>223</width>
+          <height>209</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QDoubleSpinBox" name="val_LON1_8">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>120</y>
+           <width>71</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>-180.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>180.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>-79.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="val_angulo_dorsal">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>135</x>
+           <y>170</y>
+           <width>80</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>-360.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>360.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>47.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_lon01_7">
+         <property name="geometry">
+          <rect>
+           <x>135</x>
+           <y>100</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>FreeSans</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lon 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_lat01_7">
+         <property name="geometry">
+          <rect>
+           <x>35</x>
+           <y>100</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>FreeSans</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lat 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Titulo_22">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>211</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Paytone One</family>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Coordenadas:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_ang_dorsal">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>120</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Noto Sans</family>
+           <pointsize>10</pointsize>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>Ángulo de incl. (°)</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="val_LAT1_8">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>120</y>
+           <width>71</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>-90.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>90.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>-20.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="check_dorsal_nazca_2">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>5</y>
+           <width>240</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Nombre de Dorsal de Nazca</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <property name="tristate">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QPlainTextEdit" name="Titulo_dorsal">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>35</y>
+           <width>201</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="plainText">
+          <string>Dorsal de Nazca</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_6">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>206</y>
+          <width>411</width>
+          <height>161</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QPlainTextEdit" name="Texto_leyenda_01">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>12</x>
+           <y>35</y>
+           <width>201</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="plainText">
+          <string>Superficial: 0-60 km</string>
+         </property>
+        </widget>
+        <widget class="QPlainTextEdit" name="Texto_leyenda_02">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>12</x>
+           <y>75</y>
+           <width>201</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="plainText">
+          <string>Intermedio: 60-300 km</string>
+         </property>
+        </widget>
+        <widget class="QPlainTextEdit" name="Texto_leyenda_03">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>12</x>
+           <y>115</y>
+           <width>201</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="plainText">
+          <string>Profundo: 300-700 km</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Titulo_8">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>211</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Paytone One</family>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Contenido de Leyenda 1:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+        <widget class="QPlainTextEdit" name="Texto2_leyenda_02">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>230</x>
+           <y>75</y>
+           <width>171</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="plainText">
+          <string>Profundidad</string>
+         </property>
+        </widget>
+        <widget class="QPlainTextEdit" name="Texto2_leyenda_01">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>230</x>
+           <y>35</y>
+           <width>171</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="plainText">
+          <string>Magnitud</string>
+         </property>
+        </widget>
+        <widget class="Line" name="linea_3">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>30</y>
+           <width>20</width>
+           <height>121</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Titulo_20">
+         <property name="geometry">
+          <rect>
+           <x>230</x>
+           <y>0</y>
+           <width>211</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Paytone One</family>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Contenido de Leyenda 2:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_7">
+        <property name="geometry">
+         <rect>
+          <x>660</x>
+          <y>0</y>
+          <width>191</width>
+          <height>209</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="Text_div_LON_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>130</y>
+           <width>110</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Noto Sans</family>
+           <pointsize>10</pointsize>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>Grilla Lon (°)</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Box_div_LON">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>90</y>
+           <width>61</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>20</number>
+         </property>
+         <property name="value">
+          <number>4</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Box_div_LAT">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>10</y>
+           <width>61</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>20</number>
+         </property>
+         <property name="value">
+          <number>4</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Box_div_LAT_grid">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>50</y>
+           <width>61</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>20</number>
+         </property>
+         <property name="value">
+          <number>2</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Box_div_LON_grid">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>130</y>
+           <width>61</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>20</number>
+         </property>
+         <property name="value">
+          <number>2</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_div_LON">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>90</y>
+           <width>110</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Noto Sans</family>
+           <pointsize>10</pointsize>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>División Lon (°)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_div_LAT_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>110</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Noto Sans</family>
+           <pointsize>10</pointsize>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>Grilla Lat (°)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Text_div_LAT">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>110</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Noto Sans</family>
+           <pointsize>10</pointsize>
+           <italic>false</italic>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="text">
+          <string>División Lat (°)</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="check_CPT_file">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>180</y>
+           <width>240</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Usar CPT personalizado</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <property name="tristate">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="Boton_reiniciar_coord_3">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>380</y>
+          <width>175</width>
+          <height>34</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Reiniciar coordenadas</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Run_Sismicidad_3">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>650</x>
+          <y>380</y>
+          <width>200</width>
+          <height>34</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>1. Graficar Sismicidad</string>
+        </property>
+       </widget>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_4">
@@ -1555,7 +3093,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>130</y>
+        <y>125</y>
         <width>90</width>
         <height>32</height>
        </rect>
@@ -1599,7 +3137,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>250</x>
-        <y>130</y>
+        <y>125</y>
         <width>90</width>
         <height>32</height>
        </rect>
@@ -1663,7 +3201,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>420</x>
-        <y>130</y>
+        <y>125</y>
         <width>90</width>
         <height>32</height>
        </rect>
@@ -1769,13 +3307,13 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>260</y>
+        <y>240</y>
         <width>90</width>
         <height>32</height>
        </rect>
       </property>
       <property name="minimum">
-       <double>0.000000000000000</double>
+       <double>-360.000000000000000</double>
       </property>
       <property name="maximum">
        <double>360.000000000000000</double>
@@ -1791,7 +3329,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>220</y>
+        <y>205</y>
         <width>90</width>
         <height>32</height>
        </rect>
@@ -1813,7 +3351,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>180</y>
+        <y>170</y>
         <width>90</width>
         <height>32</height>
        </rect>
@@ -1835,7 +3373,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>250</x>
-        <y>180</y>
+        <y>170</y>
         <width>90</width>
         <height>32</height>
        </rect>
@@ -1857,7 +3395,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>250</x>
-        <y>220</y>
+        <y>205</y>
         <width>90</width>
         <height>32</height>
        </rect>
@@ -1879,13 +3417,13 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>250</x>
-        <y>260</y>
+        <y>240</y>
         <width>90</width>
         <height>32</height>
        </rect>
       </property>
       <property name="minimum">
-       <double>0.000000000000000</double>
+       <double>-360.000000000000000</double>
       </property>
       <property name="maximum">
        <double>360.000000000000000</double>
@@ -1901,7 +3439,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>420</x>
-        <y>180</y>
+        <y>170</y>
         <width>90</width>
         <height>32</height>
        </rect>
@@ -1923,7 +3461,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>420</x>
-        <y>220</y>
+        <y>205</y>
         <width>90</width>
         <height>32</height>
        </rect>
@@ -1945,13 +3483,13 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>420</x>
-        <y>260</y>
+        <y>240</y>
         <width>90</width>
         <height>32</height>
        </rect>
       </property>
       <property name="minimum">
-       <double>0.000000000000000</double>
+       <double>-360.000000000000000</double>
       </property>
       <property name="maximum">
        <double>360.000000000000000</double>
@@ -1988,7 +3526,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>130</y>
+        <y>125</y>
         <width>51</width>
         <height>31</height>
        </rect>
@@ -2009,7 +3547,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>180</y>
+        <y>170</y>
         <width>51</width>
         <height>31</height>
        </rect>
@@ -2030,7 +3568,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>260</y>
+        <y>240</y>
         <width>51</width>
         <height>31</height>
        </rect>
@@ -2051,7 +3589,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>220</y>
+        <y>205</y>
         <width>51</width>
         <height>31</height>
        </rect>
@@ -2072,7 +3610,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>200</x>
-        <y>130</y>
+        <y>125</y>
         <width>51</width>
         <height>31</height>
        </rect>
@@ -2093,7 +3631,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>200</x>
-        <y>180</y>
+        <y>170</y>
         <width>51</width>
         <height>31</height>
        </rect>
@@ -2114,7 +3652,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>200</x>
-        <y>220</y>
+        <y>205</y>
         <width>51</width>
         <height>31</height>
        </rect>
@@ -2156,7 +3694,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>200</x>
-        <y>260</y>
+        <y>240</y>
         <width>51</width>
         <height>31</height>
        </rect>
@@ -2177,7 +3715,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>370</x>
-        <y>130</y>
+        <y>125</y>
         <width>51</width>
         <height>31</height>
        </rect>
@@ -2198,7 +3736,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>370</x>
-        <y>180</y>
+        <y>170</y>
         <width>51</width>
         <height>31</height>
        </rect>
@@ -2219,7 +3757,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>370</x>
-        <y>220</y>
+        <y>205</y>
         <width>51</width>
         <height>31</height>
        </rect>
@@ -2261,7 +3799,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>370</x>
-        <y>260</y>
+        <y>240</y>
         <width>51</width>
         <height>31</height>
        </rect>
@@ -2297,7 +3835,7 @@ p, li { white-space: pre-wrap; }
        </font>
       </property>
       <property name="text">
-       <string>Generar coordenadas</string>
+       <string>2. Generar coordenadas</string>
       </property>
      </widget>
      <widget class="QCheckBox" name="check_rectangulo_norte">
@@ -2394,7 +3932,7 @@ p, li { white-space: pre-wrap; }
        </font>
       </property>
       <property name="text">
-       <string>Graficar sismicidad con rectángulos</string>
+       <string>3. Graficar sismicidad con rectángulos</string>
       </property>
      </widget>
      <widget class="QPushButton" name="Boton_reiniciar_coord_2">
@@ -2435,7 +3973,7 @@ p, li { white-space: pre-wrap; }
         <x>540</x>
         <y>10</y>
         <width>20</width>
-        <height>281</height>
+        <height>261</height>
        </rect>
       </property>
       <property name="orientation">
@@ -2466,7 +4004,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>290</y>
+        <y>270</y>
         <width>831</width>
         <height>20</height>
        </rect>
@@ -2475,270 +4013,970 @@ p, li { white-space: pre-wrap; }
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="Titulo_15">
+     <widget class="QToolBox" name="toolBox_2">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>300</y>
-        <width>340</width>
-        <height>31</height>
+        <x>0</x>
+        <y>290</y>
+        <width>851</width>
+        <height>221</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <family>Paytone One</family>
-        <italic>false</italic>
-        <kerning>true</kerning>
-       </font>
+      <property name="currentIndex">
+       <number>0</number>
       </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ruta del archivo de topografía (GRD/NC)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QTextBrowser" name="ruta_grdfile_2">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>330</y>
-        <width>680</width>
-        <height>34</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+      <widget class="QWidget" name="page_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>851</width>
+         <height>157</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>1) Graficar perfiles</string>
+       </attribute>
+       <widget class="QPushButton" name="Boton_examinar_4">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>720</x>
+          <y>30</y>
+          <width>111</width>
+          <height>34</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Examinar</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titulo_15">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>0</y>
+          <width>340</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Paytone One</family>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ruta del archivo de topografía (GRD/NC)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="combo_perfil_region">
+        <property name="geometry">
+         <rect>
+          <x>720</x>
+          <y>75</y>
+          <width>111</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>Norte</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Centro</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Sur</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QPlainTextEdit" name="Titulo_perfil">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>90</y>
+          <width>251</width>
+          <height>34</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="plainText">
+         <string>Sismicidad 1980-2019 Mw &gt;= 5.0</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="check_profundos_2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>130</y>
+          <width>240</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Graficar sismos profundos</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="check_intermedios_2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>100</y>
+          <width>240</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Graficar sismos intermedios</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="check_superficiales_2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>70</y>
+          <width>240</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Graficar sismos superficiales</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="ruta_grdfile_2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>680</width>
+          <height>34</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="Boton_examinar_4">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>720</x>
-        <y>330</y>
-        <width>111</width>
-        <height>34</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Examinar</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="check_leyenda_02">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>570</x>
-        <y>390</y>
-        <width>151</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Mostrar Leyenda</string>
-      </property>
-      <property name="checkable">
-       <bool>true</bool>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-      <property name="tristate">
-       <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="combo_perfil_region">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>450</y>
-        <width>111</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>Norte</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titulo_16">
+        <property name="geometry">
+         <rect>
+          <x>530</x>
+          <y>75</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Paytone One</family>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Graficar perfil de la región:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Run_Perfil_Sismico">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>120</y>
+          <width>261</width>
+          <height>34</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>4. Graficar Perfil Sísmico</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="check_leyenda_02">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>130</y>
+          <width>151</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Mostrar Leyenda</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titulo_17">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>60</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Paytone One</family>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Título de leyenda:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>851</width>
+         <height>157</height>
+        </rect>
        </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Centro</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Sur</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="Titulo_16">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>420</y>
-        <width>211</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Paytone One</family>
-        <italic>false</italic>
-        <kerning>true</kerning>
-       </font>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Graficar perfil de la región:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="Run_Perfil_Sismico">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>570</x>
-        <y>430</y>
-        <width>261</width>
-        <height>34</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Graficar Perfil Sísmico</string>
-      </property>
-     </widget>
-     <widget class="QPlainTextEdit" name="Titulo_perfil">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>390</y>
-        <width>251</width>
-        <height>34</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="plainText">
-       <string>Sismicidad 1980-2019 Mw &gt;= 5.0</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="Titulo_17">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>360</y>
-        <width>211</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Paytone One</family>
-        <italic>false</italic>
-        <kerning>true</kerning>
-       </font>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Título de leyenda:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="check_intermedios_2">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>420</y>
-        <width>240</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Graficar sismos intermedios</string>
-      </property>
-      <property name="checkable">
-       <bool>true</bool>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-      <property name="tristate">
-       <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="check_profundos_2">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>450</y>
-        <width>240</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Graficar sismos profundos</string>
-      </property>
-      <property name="checkable">
-       <bool>true</bool>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-      <property name="tristate">
-       <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="check_superficiales_2">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>390</y>
-        <width>240</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Graficar sismos superficiales</string>
-      </property>
-      <property name="checkable">
-       <bool>true</bool>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-      <property name="tristate">
-       <bool>false</bool>
-      </property>
+       <attribute name="label">
+        <string>2) Opciones avanzadas</string>
+       </attribute>
+       <widget class="QPlainTextEdit" name="Etiqueta_perfil_x">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>40</y>
+          <width>181</width>
+          <height>34</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="plainText">
+         <string>Distancia (km)</string>
+        </property>
+       </widget>
+       <widget class="QPlainTextEdit" name="Etiqueta_perfil_y2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>120</y>
+          <width>181</width>
+          <height>34</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="plainText">
+         <string>Elev. (km)</string>
+        </property>
+       </widget>
+       <widget class="QPlainTextEdit" name="Etiqueta_perfil_y1">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>80</y>
+          <width>181</width>
+          <height>34</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="plainText">
+         <string>Profundidad (km)</string>
+        </property>
+       </widget>
+       <widget class="QPlainTextEdit" name="Titulo_perfil_02">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>40</y>
+          <width>191</width>
+          <height>34</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="plainText">
+         <string>Perfil</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titulo_24">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>5</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Paytone One</family>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Etiqueta de ejes:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Titulo_25">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>5</y>
+          <width>201</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Paytone One</family>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Contenido de título:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="Box_div_x">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>85</y>
+          <width>61</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>1000</number>
+        </property>
+        <property name="value">
+         <number>100</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="Box_div_x_grilla">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>125</y>
+          <width>61</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>1000</number>
+        </property>
+        <property name="value">
+         <number>50</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="Box_div_y1_grilla">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>45</y>
+          <width>61</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>1000</number>
+        </property>
+        <property name="value">
+         <number>50</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Text_div_x">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>85</y>
+          <width>110</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans</family>
+          <pointsize>10</pointsize>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>División X (km)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Text_div_y1_grilla">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>45</y>
+          <width>110</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans</family>
+          <pointsize>10</pointsize>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>Grilla Y1 (km)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Text_div_x_grilla">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>125</y>
+          <width>110</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans</family>
+          <pointsize>10</pointsize>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>Grilla X (km)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Text_div_y1">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>5</y>
+          <width>110</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans</family>
+          <pointsize>10</pointsize>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>División Y1 (km)</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="Box_div_y1">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>5</y>
+          <width>61</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>1000</number>
+        </property>
+        <property name="value">
+         <number>100</number>
+        </property>
+       </widget>
+       <widget class="Line" name="linea_6">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>10</y>
+          <width>20</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Text_perfil_x">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans</family>
+          <pointsize>10</pointsize>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>X</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Text_perfil_y2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>120</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans</family>
+          <pointsize>10</pointsize>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>Y2</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Text_perfil_y1">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans</family>
+          <pointsize>10</pointsize>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>Y1</string>
+        </property>
+       </widget>
+       <widget class="Line" name="linea_7">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>10</y>
+          <width>20</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+       <widget class="Line" name="linea_8">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>70</y>
+          <width>211</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="Box_div_y2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>85</y>
+          <width>61</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>7</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="Box_div_y2_grilla">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>125</y>
+          <width>61</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>7</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Text_div_y2">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>85</y>
+          <width>110</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans</family>
+          <pointsize>10</pointsize>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>División Y2 (km)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Text_div_y2_grilla">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>125</y>
+          <width>110</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans</family>
+          <pointsize>10</pointsize>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>Grilla Y2 (km)</string>
+        </property>
+       </widget>
+       <widget class="Line" name="linea_9">
+        <property name="geometry">
+         <rect>
+          <x>630</x>
+          <y>10</y>
+          <width>20</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="Box_min_y1">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>770</x>
+          <y>5</y>
+          <width>71</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>-1000</number>
+        </property>
+        <property name="maximum">
+         <number>0</number>
+        </property>
+        <property name="value">
+         <number>-700</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="Box_max_y1">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>770</x>
+          <y>45</y>
+          <width>71</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>-1000</number>
+        </property>
+        <property name="maximum">
+         <number>0</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="Box_min_y2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>770</x>
+          <y>85</y>
+          <width>71</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>-10</number>
+        </property>
+        <property name="maximum">
+         <number>0</number>
+        </property>
+        <property name="value">
+         <number>-7</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Text_min_y2">
+        <property name="geometry">
+         <rect>
+          <x>660</x>
+          <y>85</y>
+          <width>110</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans</family>
+          <pointsize>10</pointsize>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>Y2 min. (km)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Text_min_y1">
+        <property name="geometry">
+         <rect>
+          <x>660</x>
+          <y>5</y>
+          <width>110</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans</family>
+          <pointsize>10</pointsize>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>Y1 min. (km)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Text_max_y1_grilla">
+        <property name="geometry">
+         <rect>
+          <x>660</x>
+          <y>45</y>
+          <width>110</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans</family>
+          <pointsize>10</pointsize>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>Y1 max. (km)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="Text_max_y2_grilla">
+        <property name="geometry">
+         <rect>
+          <x>660</x>
+          <y>125</y>
+          <width>110</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Noto Sans</family>
+          <pointsize>10</pointsize>
+          <italic>false</italic>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="text">
+         <string>Y2 max. (km)</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="Box_max_y2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>770</x>
+          <y>125</y>
+          <width>71</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>7</number>
+        </property>
+       </widget>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
@@ -2751,7 +4989,7 @@ p, li { white-space: pre-wrap; }
         <x>0</x>
         <y>0</y>
         <width>851</width>
-        <height>481</height>
+        <height>511</height>
        </rect>
       </property>
       <property name="html">
@@ -2762,7 +5000,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;GrafSPS&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Programa con interfaz gráfica PyQt5 basado en scripts en lenguaje C-Shell y Bash con el objetivo de graficar mapas de sismicidad y perfiles sísmicos principalmente para Perú utilizando GMT4 (Generic Mapping Tools).&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nota&lt;/span&gt;: Los scripts fueron creados tomando como base el trabajo de César Jimenez y Cristobal Condori.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nota&lt;/span&gt;: Los scripts fueron creados tomando como base el trabajo de César Jiménez y Cristobal Condori.&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;GrafSPS&lt;/span&gt; permite realizar principalmente lo siguiente (en la región de Perú):&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
@@ -2779,8 +5017,9 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3. &lt;span style=&quot; font-weight:600;&quot;&gt;perfil_sismicidad_VARIABLE.eps&lt;/span&gt;: Perfil sísmico de profundidad. Donde VARIABLE toma el nombre de &amp;quot;norte&amp;quot;, &amp;quot;centro&amp;quot; o &amp;quot;sur&amp;quot;.&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;RECOMENDACIONES&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Utilizar el catálogo sísmico del NEIC (en formato CSV) y eliminar las comas (',') antes de ingresarlo a GrafSPS.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Utilizar el catálogo sísmico del NEIC (en formato CSV) y reemplazar las comas (',') por espacios (' ') antes de ingresarlo a GrafSPS.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- De utilizar otro catálogo, el usuario puede asignarle el formato del NEIC o modificar los scripts bash/shell para la correcta interpretación.&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Utilizar una distribución de GNU/Linux con escritorio KDE Plasma 5.12 o superior.&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;REQUISITOS MÍNIMOS&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- GMT4&lt;/p&gt;
@@ -2790,7 +5029,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Evince&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- python3&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- python3-pyqt5&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- GNU Linux (Kernel 4.15) 64-bit [Se recomienda una distribución con KDE Plasma 5.12 o superior]&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- GNU Linux (Kernel 4.15) 64-bit&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;¿CÓMO EJECUTAR?&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. Descargar un catálogo sísmico del NEIC en formato CSV. Posteriormente, modificarlo para reemplazar las comas (',') por espacios (' ').&lt;/p&gt;
@@ -2808,7 +5047,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;13. Clic en &amp;quot;`Graficar Perfil Sísmico`&amp;quot;.&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;NOTAS IMPORTANTES&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. En cada inicio del programa es obligatorio seleccionar los archivos CSV y GRD/NC además de la carpeta contenedora de los datos de contorno. Pero, si el usuario lo desea, puede ingresar al archivo &amp;quot;`Launcher.py`&amp;quot; (con cualquier editor de texto) y modificar estas opciones para que se guarden por defecto (linea 56-83).&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. En cada inicio del programa es obligatorio seleccionar los archivos CSV y GRD/NC además de la carpeta contenedora de los datos de contorno. Pero, si el usuario lo desea, puede ingresar al archivo &amp;quot;`Launcher.py`&amp;quot; (con cualquier editor de texto) y modificar estas opciones para que se guarden por defecto (linea 56-92).&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. Por defecto, los archivos EPS se ejecutan en &amp;quot;`Evince`&amp;quot;. El usuario puede cambiar este lector por el de su preferencia modificando las últimas lineas de los archivos bash/shell.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3. Muchos de los botones no se encuentran desactivados, por lo que si se realiza un procedimiento inadecuado el programa no realizará acción alguna. Para conocer el procedimiento adecuado, revisar la sección &amp;quot;`¿CÓMO EJECUTAR?`&amp;quot;.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4. Se proporciona GrafSPS con la carpeta &amp;quot;`Datos_contornos`&amp;quot; (contiene los rasgos tectónicos para Perú).&lt;/p&gt;
@@ -2838,7 +5077,7 @@ p, li { white-space: pre-wrap; }
         <x>0</x>
         <y>0</y>
         <width>851</width>
-        <height>481</height>
+        <height>511</height>
        </rect>
       </property>
       <property name="html">
@@ -3534,7 +5773,7 @@ p, li { white-space: pre-wrap; }
         <x>450</x>
         <y>0</y>
         <width>401</width>
-        <height>481</height>
+        <height>511</height>
        </rect>
       </property>
       <property name="html">
@@ -3545,14 +5784,14 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;GrafSPS (Graficador de Sismicidad y Perfiles Sísmicos)&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Copyright (C) 2020 Néstor Luna Diaz&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Versión: 1.0.0&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Última modificación: 16/07/2020&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Versión: 1.1.0&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Última modificación: 17/10/2020&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Enlace de descarga oficial: &lt;a href=&quot;https://github.com/nestor-ld93/GrafSPS&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;https://github.com/nestor-ld93/GrafSPS&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Contacto: &lt;a href=&quot;mailto:nestor.luna@unmsm.edu.pe&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;nestor.luna@unmsm.edu.pe&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Agradecimientos:&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. César Jimenez Tintaya&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. César Jiménez Tintaya&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. Cristobal Condori Quispe&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Este es un software gratuito y puede redistribuirlo bajo ciertas condiciones (ver &amp;quot;Licencia&amp;quot; para más detalles).&lt;/p&gt;
@@ -3573,7 +5812,7 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">border-image: url(:/img_info/img_info.png);
+       <string notr="true">border-image: url(:/img_info/logo_info.svg);
 background-color: transparent;</string>
       </property>
       <property name="text">
@@ -3605,7 +5844,7 @@ background-color: transparent;</string>
     <property name="geometry">
      <rect>
       <x>620</x>
-      <y>563</y>
+      <y>595</y>
       <width>161</width>
       <height>34</height>
      </rect>
@@ -3620,7 +5859,7 @@ background-color: transparent;</string>
    <widget class="QLabel" name="Titulo_programa_02">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>370</x>
       <y>12</y>
       <width>371</width>
       <height>21</height>
@@ -3640,6 +5879,33 @@ background-color: transparent;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot; font-family:'Noto Sans'; color:#ffffff;&quot;&gt;Graficador de Sismicidad y Perfiles Sísmicos)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QLabel" name="Titulo_programa_03">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>8</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>FreeSans</family>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;[BETA]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
    <zorder>Fondo_2</zorder>
    <zorder>Fondo</zorder>
    <zorder>tabWidget</zorder>
@@ -3650,6 +5916,7 @@ background-color: transparent;</string>
    <zorder>Copyright_principal</zorder>
    <zorder>Boton_Borrar</zorder>
    <zorder>Titulo_programa_02</zorder>
+   <zorder>Titulo_programa_03</zorder>
   </widget>
   <action name="actionSalir">
    <property name="text">
