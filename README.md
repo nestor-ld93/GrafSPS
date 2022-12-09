@@ -61,8 +61,8 @@ Programa con interfaz gráfica PyQt5 basado en scripts en lenguaje C-Shell y Bas
 
 ## ¿CÓMO DESCARGAR?
 
-- Para obtener la última versión estable, descargue desde la pestaña [[Releases](https://github.com/nestor-ld93/GrafSPS/releases)].
-- Para obtener la última versión candidata a estable, descargue desde el botón [Code] o ejecute en un terminal:
+Para obtener la última versión estable, descargue desde la pestaña [[Releases](https://github.com/nestor-ld93/GrafSPS/releases)].
+Para obtener la última versión candidata a estable, descargue desde el botón [Code] o ejecute en un terminal:
 
     git clone https://github.com/nestor-ld93/GrafSPS
 
