@@ -39,33 +39,33 @@ i=1
 while [ $i -le $N ]; do
 ################## Variables a modificar (Perfil Norte) #######################
 if [ $i -eq 1 ]; then
-    lat0=$1             # Latitud inicial.
-    lon0=$2            # Longitud inicial.
+    lat0=${1}             # Latitud inicial.
+    lon0=${2}            # Longitud inicial.
 
-    L=$3              # Largo del perfil (km2).
-    W=$4               # Ancho del perfil (km2).
-    ang=$5              # Angulo de rotacion (grad).
+    L=${3}              # Largo del perfil (km2).
+    W=${4}               # Ancho del perfil (km2).
+    ang=${5}              # Angulo de rotacion (grad).
 fi
 
 ################## Variables a modificar (Perfil Centro) ######################
 if [ $i -eq 2 ]; then
-    lat0=$6           # Latitud inicial.
-    lon0=$7           # Longitud inicial.
+    lat0=${6}           # Latitud inicial.
+    lon0=${7}           # Longitud inicial.
 
-    L=$8              # Largo del perfil (km2).
-    W=$9               # Ancho del perfil (km2).
-    ang=$10              # Angulo de rotacion (grad).
+    L=${8}              # Largo del perfil (km2).
+    W=${9}               # Ancho del perfil (km2).
+    ang=${10}              # Angulo de rotacion (grad).
 fi
 
 ################## Variables a modificar (Perfil Sur) ########################
 if [ $i -eq 3 ]; then
-    lat0=$11          # Latitud inicial.
-    lon0=$12          # Longitud inicial.
+    lat0=${11}          # Latitud inicial.
+    lon0=${12}          # Longitud inicial.
 
 #    L=886.37             # Largo del perfil (km2).
-    L=$13             # Largo del perfil (km2).
-    W=$14              # Ancho del perfil (km2).
-    ang=$15             # Angulo de rotacion (grad).
+    L=${13}             # Largo del perfil (km2).
+    W=${14}              # Ancho del perfil (km2).
+    ang=${15}             # Angulo de rotacion (grad).
 fi
 
 ################## Operaciones para rotar coordenadas ########################
