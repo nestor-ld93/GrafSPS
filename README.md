@@ -50,19 +50,18 @@ Programa con interfaz gráfica PyQt5 basado en scripts en lenguaje C-Shell y Bas
 
 ## REQUISITOS MÍNIMOS
 
-- `GMT4`
+- `GMT4` o `GMT6`
 - `sh` & `csh`
-- `gawk` (Para Ubuntu 20.04 o superior)
+- `gawk`
 - `ps2eps`
 - `evince`
 - `python3`
 - `python3-pyqt5`
-- `GNU Linux (Kernel 4.15) 64-bit`
 
 ## ¿CÓMO DESCARGAR?
 
 Para obtener la última versión estable, descargue desde la pestaña [[Releases](https://github.com/nestor-ld93/GrafSPS/releases)].
-Para obtener la última versión candidata a estable, descargue desde el botón [Code] o ejecute en un terminal:
+Para obtener la última versión dev, descargue desde el botón [Code] o ejecute en un terminal:
 
     git clone https://github.com/nestor-ld93/GrafSPS
 
@@ -84,12 +83,14 @@ Para obtener la última versión candidata a estable, descargue desde el botón 
 
 ## NOTAS IMPORTANTES
 
-1. En cada inicio del programa es obligatorio seleccionar los archivos CSV y GRD/NC además de la carpeta contenedora de los datos de contorno. Pero, si el usuario lo desea, puede ingresar al archivo "`Launcher.py`" (con cualquier editor de texto) y modificar estas opciones para que se guarden por defecto (linea 56-92).
+1. Se utiliza por defecto `GMT6`.
+1. Para utilizar `GMT4`, ingrese a la carpeta `Scripts_templates`, copie y renombre los archivos `1_sismicidad_gmt4.csh`, `3_sismicidad_perfil_gmt4.csh` y `4_perfil_sismico_gmt4.csh` al directorio principal para reemplazar los archivos por defecto.
+1. En cada inicio del programa es obligatorio seleccionar los archivos CSV y GRD/NC además de la carpeta contenedora de los datos de contorno. Pero, si el usuario lo desea, puede ingresar al archivo "`Launcher.py`" (con cualquier editor de texto) y modificar estas opciones para que se guarden por defecto.
 1. Por defecto, los archivos EPS se ejecutan en "`Evince`". El usuario puede cambiar este lector por el de su preferencia modificando las últimas lineas de los archivos bash/shell.
 1. Muchos de los botones no se encuentran desactivados, por lo que si se realiza un procedimiento inadecuado el programa no realizará acción alguna. Para conocer el procedimiento adecuado, revisar la sección "`¿CÓMO EJECUTAR?`".
 1. Se proporciona GrafSPS con la carpeta "`Datos_contornos`" (contiene los rasgos tectónicos para Perú).
 1. No se proporciona los datos de topografía-batimetría. El usuario deberá conseguirlos de fuentes oficiales.
-1. Mientras más grande sean los archivos GRD/NC, mayor será el tiempo computacional para generar los mapas y los perfiles (Este no es un problema de GrafSPS). Para solventarlo, el usuario puede recortar el archivo de topografía-batimetría para una región de interés.
+1. Mientras más grande sean los archivos GRD/NC, mayor será el tiempo computacional para generar los mapas y los perfiles (Este no es un problema de GrafSPS). Para solventarlo, el usuario puede recortar el archivo de topografía-batimetría para una región de interés usando herramientas externas.
 1. Los parámetros del mapa de sismicidad con las regiones rectangulares son dependientes de las pestaña "`Sismicidad`".
 1. En distribuciones basadas en el escritorio KDE Plasma, **GrafSPS** se adapta al esquema de colores seleccionado por el SO.
 
@@ -97,6 +98,7 @@ Para obtener la última versión candidata a estable, descargue desde el botón 
 
 1. "[GMT4 y documentación oficial de instalación](https://www.generic-mapping-tools.org/download/)"
 1. "[GMT4 instalación semi-desatendida](https://github.com/nestor-ld93/GMT4)"
+1. "[GMT6 y documentación oficial de instalación](https://github.com/GenericMappingTools/gmt)"
 1. "[Catálogo sísmico del NEIC](http://earthquake.usgs.gov/earthquakes/map/)"
 1. "[Topografía - ETOPO1 Global Relief Model](https://www.ngdc.noaa.gov/mgg/global/)"
 1. "[Batimetría - GEBCO The General Bathymetric Chart of the Oceans](https://www.gebco.net/data_and_products/gridded_bathymetry_data/)"
@@ -131,12 +133,4 @@ GMT uses (or can access) data derived from these sources:
 
 ## LISTA DE CAMBIOS
 
-- (v1.0.0) [25/08/2020] Lanzamiento inicial.
-- (v1.0.1) [08/12/2022] Corregido generador de coordenadas en versiones actuales de sh.
-- (v1.1.0) [08/12/2022] Los textos editables ahora aceptan caracteres con tildes y ñ (´,ñ) en minúsculas y mayúsculas.
-- (v1.1.0) [08/12/2022] Agregado opción para utilizar paleta de colores personalizada.
-- (v1.1.0) [08/12/2022] Agregado opción "3) Opciones avanzadas".
-- (v1.1.0) [08/12/2022] Agregado textos editables con parámetros de personalización en "3) Opciones avanzadas".
-- (v1.1.0) [08/12/2022] Agregado textos editables para modificar el contenido de la Leyenda 1.
-- (v1.1.0) [08/12/2022] Agregado opción para mostrar escala del mapa en "3) Opciones avanzadas".
-- (v1.1.0) [08/12/2022] Agregado opciones de grillado para el mapa.
+Todos los cambios notables de este proyecto se encuentran en [Changelog](https://github.com/nestor-ld93/GrafSPS/blob/master/CHANGELOG.md).

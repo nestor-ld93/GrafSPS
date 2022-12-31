@@ -154,7 +154,7 @@ background-color: transparent;</string>
      </font>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Copyright (C) 2020 Néstor Luna Diaz&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Copyright (C) 2022 Néstor Luna Diaz&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QTabWidget" name="tabWidget">
@@ -212,7 +212,9 @@ background-color: transparent;</string>
         <property name="font">
          <font>
           <family>Paytone One</family>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -255,7 +257,9 @@ p, li { white-space: pre-wrap; }
         <property name="font">
          <font>
           <family>Paytone One</family>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -298,7 +302,9 @@ p, li { white-space: pre-wrap; }
         <property name="font">
          <font>
           <family>Paytone One</family>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -448,6 +454,8 @@ p, li { white-space: pre-wrap; }
         <property name="font">
          <font>
           <family>Paytone One</family>
+          <weight>50</weight>
+          <bold>false</bold>
          </font>
         </property>
         <property name="text">
@@ -534,7 +542,9 @@ p, li { white-space: pre-wrap; }
         <property name="font">
          <font>
           <family>Paytone One</family>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -549,7 +559,7 @@ p, li { white-space: pre-wrap; }
          <x>0</x>
          <y>0</y>
          <width>851</width>
-         <height>415</height>
+         <height>409</height>
         </rect>
        </property>
        <attribute name="label">
@@ -681,7 +691,9 @@ p, li { white-space: pre-wrap; }
         <property name="font">
          <font>
           <family>Paytone One</family>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -827,7 +839,9 @@ p, li { white-space: pre-wrap; }
         <property name="font">
          <font>
           <family>Paytone One</family>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -939,7 +953,9 @@ p, li { white-space: pre-wrap; }
         <property name="font">
          <font>
           <family>Paytone One</family>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -1017,7 +1033,9 @@ p, li { white-space: pre-wrap; }
         <property name="font">
          <font>
           <family>Paytone One</family>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -1181,7 +1199,9 @@ p, li { white-space: pre-wrap; }
         <property name="font">
          <font>
           <family>Paytone One</family>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -1688,7 +1708,9 @@ p, li { white-space: pre-wrap; }
          <property name="font">
           <font>
            <family>Paytone One</family>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -1709,7 +1731,9 @@ p, li { white-space: pre-wrap; }
           <font>
            <family>Noto Sans</family>
            <pointsize>10</pointsize>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -1910,7 +1934,9 @@ p, li { white-space: pre-wrap; }
           <font>
            <family>Noto Sans</family>
            <pointsize>10</pointsize>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -1930,7 +1956,9 @@ p, li { white-space: pre-wrap; }
          <property name="font">
           <font>
            <family>Paytone One</family>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -2055,7 +2083,9 @@ p, li { white-space: pre-wrap; }
          <property name="font">
           <font>
            <family>Paytone One</family>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -2099,7 +2129,9 @@ p, li { white-space: pre-wrap; }
           <font>
            <family>Noto Sans</family>
            <pointsize>10</pointsize>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -2323,7 +2355,9 @@ p, li { white-space: pre-wrap; }
          <property name="font">
           <font>
            <family>Paytone One</family>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -2344,7 +2378,9 @@ p, li { white-space: pre-wrap; }
           <font>
            <family>Noto Sans</family>
            <pointsize>10</pointsize>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -2545,7 +2581,9 @@ p, li { white-space: pre-wrap; }
          <property name="font">
           <font>
            <family>Paytone One</family>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -2566,7 +2604,9 @@ p, li { white-space: pre-wrap; }
           <font>
            <family>Noto Sans</family>
            <pointsize>10</pointsize>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -2728,7 +2768,9 @@ p, li { white-space: pre-wrap; }
          <property name="font">
           <font>
            <family>Paytone One</family>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -2799,7 +2841,9 @@ p, li { white-space: pre-wrap; }
          <property name="font">
           <font>
            <family>Paytone One</family>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -2836,7 +2880,9 @@ p, li { white-space: pre-wrap; }
           <font>
            <family>Noto Sans</family>
            <pointsize>10</pointsize>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -2945,7 +2991,9 @@ p, li { white-space: pre-wrap; }
           <font>
            <family>Noto Sans</family>
            <pointsize>10</pointsize>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -2966,7 +3014,9 @@ p, li { white-space: pre-wrap; }
           <font>
            <family>Noto Sans</family>
            <pointsize>10</pointsize>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -2987,7 +3037,9 @@ p, li { white-space: pre-wrap; }
           <font>
            <family>Noto Sans</family>
            <pointsize>10</pointsize>
+           <weight>50</weight>
            <italic>false</italic>
+           <bold>false</bold>
            <kerning>true</kerning>
           </font>
          </property>
@@ -3081,7 +3133,9 @@ p, li { white-space: pre-wrap; }
       <property name="font">
        <font>
         <family>Paytone One</family>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3189,7 +3243,9 @@ p, li { white-space: pre-wrap; }
       <property name="font">
        <font>
         <family>Paytone One</family>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3253,7 +3309,9 @@ p, li { white-space: pre-wrap; }
       <property name="font">
        <font>
         <family>Paytone One</family>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3273,7 +3331,9 @@ p, li { white-space: pre-wrap; }
       <property name="font">
        <font>
         <family>Paytone One</family>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3514,7 +3574,9 @@ p, li { white-space: pre-wrap; }
        <font>
         <family>Noto Sans</family>
         <pointsize>11</pointsize>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3535,7 +3597,9 @@ p, li { white-space: pre-wrap; }
        <font>
         <family>Noto Sans</family>
         <pointsize>11</pointsize>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3556,7 +3620,9 @@ p, li { white-space: pre-wrap; }
        <font>
         <family>Noto Sans</family>
         <pointsize>11</pointsize>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3577,7 +3643,9 @@ p, li { white-space: pre-wrap; }
        <font>
         <family>Noto Sans</family>
         <pointsize>11</pointsize>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3598,7 +3666,9 @@ p, li { white-space: pre-wrap; }
        <font>
         <family>Noto Sans</family>
         <pointsize>11</pointsize>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3619,7 +3689,9 @@ p, li { white-space: pre-wrap; }
        <font>
         <family>Noto Sans</family>
         <pointsize>11</pointsize>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3640,7 +3712,9 @@ p, li { white-space: pre-wrap; }
        <font>
         <family>Noto Sans</family>
         <pointsize>11</pointsize>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3661,7 +3735,9 @@ p, li { white-space: pre-wrap; }
        <font>
         <family>Noto Sans</family>
         <pointsize>11</pointsize>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3682,7 +3758,9 @@ p, li { white-space: pre-wrap; }
        <font>
         <family>Noto Sans</family>
         <pointsize>11</pointsize>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3703,7 +3781,9 @@ p, li { white-space: pre-wrap; }
        <font>
         <family>Noto Sans</family>
         <pointsize>11</pointsize>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3724,7 +3804,9 @@ p, li { white-space: pre-wrap; }
        <font>
         <family>Noto Sans</family>
         <pointsize>11</pointsize>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3745,7 +3827,9 @@ p, li { white-space: pre-wrap; }
        <font>
         <family>Noto Sans</family>
         <pointsize>11</pointsize>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3766,7 +3850,9 @@ p, li { white-space: pre-wrap; }
        <font>
         <family>Noto Sans</family>
         <pointsize>11</pointsize>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3787,7 +3873,9 @@ p, li { white-space: pre-wrap; }
        <font>
         <family>Noto Sans</family>
         <pointsize>11</pointsize>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3808,7 +3896,9 @@ p, li { white-space: pre-wrap; }
        <font>
         <family>Noto Sans</family>
         <pointsize>11</pointsize>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -3992,7 +4082,9 @@ p, li { white-space: pre-wrap; }
       <property name="font">
        <font>
         <family>Paytone One</family>
+        <weight>50</weight>
         <italic>false</italic>
+        <bold>false</bold>
         <kerning>true</kerning>
        </font>
       </property>
@@ -4030,8 +4122,8 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>851</width>
-         <height>157</height>
+         <width>96</width>
+         <height>26</height>
         </rect>
        </property>
        <attribute name="label">
@@ -4065,7 +4157,9 @@ p, li { white-space: pre-wrap; }
         <property name="font">
          <font>
           <family>Paytone One</family>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4227,7 +4321,9 @@ p, li { white-space: pre-wrap; }
         <property name="font">
          <font>
           <family>Paytone One</family>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4294,7 +4390,9 @@ p, li { white-space: pre-wrap; }
         <property name="font">
          <font>
           <family>Paytone One</family>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4308,8 +4406,8 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>851</width>
-         <height>157</height>
+         <width>96</width>
+         <height>26</height>
         </rect>
        </property>
        <attribute name="label">
@@ -4403,7 +4501,9 @@ p, li { white-space: pre-wrap; }
         <property name="font">
          <font>
           <family>Paytone One</family>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4423,7 +4523,9 @@ p, li { white-space: pre-wrap; }
         <property name="font">
          <font>
           <family>Paytone One</family>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4510,7 +4612,9 @@ p, li { white-space: pre-wrap; }
          <font>
           <family>Noto Sans</family>
           <pointsize>10</pointsize>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4531,7 +4635,9 @@ p, li { white-space: pre-wrap; }
          <font>
           <family>Noto Sans</family>
           <pointsize>10</pointsize>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4552,7 +4658,9 @@ p, li { white-space: pre-wrap; }
          <font>
           <family>Noto Sans</family>
           <pointsize>10</pointsize>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4573,7 +4681,9 @@ p, li { white-space: pre-wrap; }
          <font>
           <family>Noto Sans</family>
           <pointsize>10</pointsize>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4629,7 +4739,9 @@ p, li { white-space: pre-wrap; }
          <font>
           <family>Noto Sans</family>
           <pointsize>10</pointsize>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4650,7 +4762,9 @@ p, li { white-space: pre-wrap; }
          <font>
           <family>Noto Sans</family>
           <pointsize>10</pointsize>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4671,7 +4785,9 @@ p, li { white-space: pre-wrap; }
          <font>
           <family>Noto Sans</family>
           <pointsize>10</pointsize>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4762,7 +4878,9 @@ p, li { white-space: pre-wrap; }
          <font>
           <family>Noto Sans</family>
           <pointsize>10</pointsize>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4783,7 +4901,9 @@ p, li { white-space: pre-wrap; }
          <font>
           <family>Noto Sans</family>
           <pointsize>10</pointsize>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4883,7 +5003,9 @@ p, li { white-space: pre-wrap; }
          <font>
           <family>Noto Sans</family>
           <pointsize>10</pointsize>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4904,7 +5026,9 @@ p, li { white-space: pre-wrap; }
          <font>
           <family>Noto Sans</family>
           <pointsize>10</pointsize>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4925,7 +5049,9 @@ p, li { white-space: pre-wrap; }
          <font>
           <family>Noto Sans</family>
           <pointsize>10</pointsize>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4946,7 +5072,9 @@ p, li { white-space: pre-wrap; }
          <font>
           <family>Noto Sans</family>
           <pointsize>10</pointsize>
+          <weight>50</weight>
           <italic>false</italic>
+          <bold>false</bold>
           <kerning>true</kerning>
          </font>
         </property>
@@ -4977,94 +5105,6 @@ p, li { white-space: pre-wrap; }
         </property>
        </widget>
       </widget>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Manual</string>
-     </attribute>
-     <widget class="QTextBrowser" name="textBrowser">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>851</width>
-        <height>511</height>
-       </rect>
-      </property>
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;GrafSPS&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Programa con interfaz gráfica PyQt5 basado en scripts en lenguaje C-Shell y Bash con el objetivo de graficar mapas de sismicidad y perfiles sísmicos principalmente para Perú utilizando GMT4 (Generic Mapping Tools).&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nota&lt;/span&gt;: Los scripts fueron creados tomando como base el trabajo de César Jiménez y Cristobal Condori.&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;GrafSPS&lt;/span&gt; permite realizar principalmente lo siguiente (en la región de Perú):&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Graficar un mapa de sismicidad sin topografía, con topografía simple y con topografía compleja (gradiente).&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Seleccionar el archivo de topografía-batimetría y gradiente (GRD/NC).&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Variar las coordenadas del mapa.&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Crear la línea de proyección del perfil y su región rectangular para 3 localizaciones distintas en función de parámetros iniciales.&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Crear perfiles sísmicos de profundidad en función de la región rectangular generada con una proyección de la topografía-batimetría.&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;GrafSPS&lt;/span&gt; permite obtener los siguientes archivos de salida:&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. &lt;span style=&quot; font-weight:600;&quot;&gt;sismicidad.eps&lt;/span&gt;: Mapa de sismicidad&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. &lt;span style=&quot; font-weight:600;&quot;&gt;sismicidad_perfil.eps&lt;/span&gt;: Mapa de sismicidad con las regiones rectangulares y la línea de perfil.&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3. &lt;span style=&quot; font-weight:600;&quot;&gt;perfil_sismicidad_VARIABLE.eps&lt;/span&gt;: Perfil sísmico de profundidad. Donde VARIABLE toma el nombre de &amp;quot;norte&amp;quot;, &amp;quot;centro&amp;quot; o &amp;quot;sur&amp;quot;.&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;RECOMENDACIONES&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Utilizar el catálogo sísmico del NEIC (en formato CSV) y reemplazar las comas (',') por espacios (' ') antes de ingresarlo a GrafSPS.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- De utilizar otro catálogo, el usuario puede asignarle el formato del NEIC o modificar los scripts bash/shell para la correcta interpretación.&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Utilizar una distribución de GNU/Linux con escritorio KDE Plasma 5.12 o superior.&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;REQUISITOS MÍNIMOS&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- GMT4&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Shell y C-Shell&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- gawk (Para Ubuntu 20.04 o superior)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- ps2eps&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Evince&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- python3&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- python3-pyqt5&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- GNU Linux (Kernel 4.15) 64-bit&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;¿CÓMO EJECUTAR?&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. Descargar un catálogo sísmico del NEIC en formato CSV. Posteriormente, modificarlo para reemplazar las comas (',') por espacios (' ').&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. Ejecutar en un terminal: `./Launcher.py`. Una vez abierta la interfaz gráfica, ingresar a la pestaña &amp;quot;`Sismicidad`&amp;quot;.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3. Seleccionar el archivo del catálogo sísmico (CSV) y la carpeta contenedora de los datos de contorno (ASCCI).&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4. Desplegar la opción &amp;quot;`2) Parámetros de personalización`&amp;quot;.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;5. Modificar los parámetros a su preferencia. Al seleccionar el tipo de topografía, si selecciona la opción &amp;quot;`Simple`&amp;quot; o &amp;quot;`Gradiente`&amp;quot;, desplegar la opción &amp;quot;`1) Archivos externos`&amp;quot; para agregar los archivos GRD/NC necesarios.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;6. Clic en &amp;quot;`Graficar Sismicidad`&amp;quot;. Inmediatamente debería visualizar el mapa de sismicidad.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;7. Ingresar a la pestaña &amp;quot;`Perfiles sísmicos`&amp;quot;.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;8. Modificar los parámetros iniciales para generar las coordenadas de la región rectangular y la línea de perfil.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;9. Clic en &amp;quot;`Generar coordenadas`&amp;quot;.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;10. Clic en &amp;quot;`Graficar sismicidad con rectángulos`&amp;quot;. Si el resultado de las regiones rectangulares no son los deseados, puede volver a modificar los parámetros iniciales (no olvidar dar clic en &amp;quot;`Generar coordenadas`&amp;quot; y en &amp;quot;`Graficar sismicidad con rectángulos`&amp;quot; al momento de realizar la modificación).&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;11. Seleccionar un archivo de topografía-batimetría (GRD/NC) para realizar la proyección sobre la línea de perfil generada.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;12. Seleccionar la región a graficar (&amp;quot;`Norte`&amp;quot;, &amp;quot;`Centro`&amp;quot; o &amp;quot;`Sur`&amp;quot;) y otras opciones adicionales.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;13. Clic en &amp;quot;`Graficar Perfil Sísmico`&amp;quot;.&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;NOTAS IMPORTANTES&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. En cada inicio del programa es obligatorio seleccionar los archivos CSV y GRD/NC además de la carpeta contenedora de los datos de contorno. Pero, si el usuario lo desea, puede ingresar al archivo &amp;quot;`Launcher.py`&amp;quot; (con cualquier editor de texto) y modificar estas opciones para que se guarden por defecto (linea 56-92).&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. Por defecto, los archivos EPS se ejecutan en &amp;quot;`Evince`&amp;quot;. El usuario puede cambiar este lector por el de su preferencia modificando las últimas lineas de los archivos bash/shell.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3. Muchos de los botones no se encuentran desactivados, por lo que si se realiza un procedimiento inadecuado el programa no realizará acción alguna. Para conocer el procedimiento adecuado, revisar la sección &amp;quot;`¿CÓMO EJECUTAR?`&amp;quot;.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4. Se proporciona GrafSPS con la carpeta &amp;quot;`Datos_contornos`&amp;quot; (contiene los rasgos tectónicos para Perú).&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;5. No se proporciona los datos de topografía-batimetría. El usuario deberá conseguirlos de fuentes oficiales.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;6. Mientras más grande sean los archivos GRD/NC, mayor será el tiempo computacional para generar los mapas y los perfiles (Este no es un problema de GrafSPS). Para solventarlo, el usuario puede recortar el archivo de topografía-batimetría para una región de interés.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;7. Los parámetros del mapa de sismicidad con las regiones rectangulares son dependientes de las pestaña &amp;quot;`Sismicidad`&amp;quot;.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;8. En distribuciones basadas en el escritorio KDE Plasma, **GrafSPS** se adapta al esquema de colores seleccionado por el SO.&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;RECURSOS EXTERNOS&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. GMT4 y documentación oficial de instalación: &amp;quot;&lt;a href=&quot;https://www.generic-mapping-tools.org/download/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;https://www.generic-mapping-tools.org/download/&lt;/span&gt;&lt;/a&gt;&amp;quot;.&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. Catálogo sísmico del NEIC: &amp;quot;&lt;a href=&quot;http://earthquake.usgs.gov/earthquakes/map/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;http://earthquake.usgs.gov/earthquakes/map/&lt;/span&gt;&lt;/a&gt;&amp;quot;.&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3. Topografía - ETOPO1 Global Relief Model: &amp;quot;&lt;a href=&quot;https://www.ngdc.noaa.gov/mgg/global/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;https://www.ngdc.noaa.gov/mgg/global/&lt;/span&gt;&lt;/a&gt;&amp;quot;.&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4. Batimetría - GEBCO The General Bathymetric Chart of the Oceans: &amp;quot;&lt;a href=&quot;https://www.gebco.net/data_and_products/gridded_bathymetry_data/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;https://www.gebco.net/data_and_products/gridded_bathymetry_data/&lt;/span&gt;&lt;/a&gt;&amp;quot;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-      <property name="openExternalLinks">
-       <bool>true</bool>
-      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_3">
@@ -5782,10 +5822,10 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;GrafSPS (Graficador de Sismicidad y Perfiles Sísmicos)&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Copyright (C) 2020 Néstor Luna Diaz&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Copyright (C) 2022 Néstor Luna Diaz&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Versión: 1.1.0&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Última modificación: 17/10/2020&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Versión: 1.2.0&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Última modificación: 30/12/2022&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Enlace de descarga oficial: &lt;a href=&quot;https://github.com/nestor-ld93/GrafSPS&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;https://github.com/nestor-ld93/GrafSPS&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Contacto: &lt;a href=&quot;mailto:nestor.luna@unmsm.edu.pe&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;nestor.luna@unmsm.edu.pe&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
@@ -5903,7 +5943,7 @@ background-color: transparent;</string>
      <string notr="true">background-color: transparent;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;[BETA]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:14pt;color:#ffffff;&quot;&gt;[BETA]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <zorder>Fondo_2</zorder>

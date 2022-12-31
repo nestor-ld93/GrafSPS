@@ -3,10 +3,10 @@
 #==================================================================================
 echo ""
 echo "+==========================================================================+"
-echo "|                           PERFIL SISMICO v1.2.0                          |"
+echo "|                           PERFIL SISMICO v1.1.0                          |"
 echo "+==========================================================================+"
 echo "| -Grafica el perfil de profundidad con datos de topografia (GRD/NC)       |"
-echo "| -Ultima actualizacion: 29/12/2022                                        |"
+echo "| -Ultima actualizacion: 17/10/2020                                        |"
 echo "| -Basado en los scripts de Cesar Jimenez y Cristobal Condori              |"
 echo "+--------------------------------------------------------------------------+"
 echo "| -Copyright (C) 2020  Nestor Luna Diaz                                    |"
@@ -81,10 +81,10 @@ set Texto_leyenda_02 = `echo $Texto_leyenda_02_pre | tr "%" " "`
 set Texto_leyenda_03_pre = $13
 set Texto_leyenda_03 = `echo $Texto_leyenda_03_pre | tr "%" " "`
 
-gmt set FONT_ANNOT 12
-gmt set FONT_LABEL 14
-gmt set FONT_TITLE 14
-gmt set MAP_GRID_PEN_PRIMARY 0.25p,121/128/129
+gmtset HEADER_FONT_SIZE 14
+gmtset ANOT_FONT_SIZE 12
+gmtset LABEL_FONT_SIZE 14
+gmtset GRID_PEN_PRIMARY	= 0.25p/121/128/129
 
 if ($perfil_region == 'norte') then
     set L = $L1
@@ -163,47 +163,47 @@ while ($i <= $N)
 end
 
 ################## Generar línea (puntos) del perfil #########################
-gmt project -C$p1 -E$p2 -G.5 -Dd -Q > $linea_perfil
+project -C$p1 -E$p2 -G.5 -Dd -Q > $linea_perfil
 
 ##### Extrae valores de la topografia en función de la línea del perfil ######
-gmt grdtrack $linea_perfil -G$grdfile | awk '{print $3, $4 }' > $linea_topo_bati
+grdtrack $linea_perfil -G$grdfile | awk '{print $3, $4 }' > $linea_topo_bati
 
 #################### Graficar el pefil de la topografia ######################
-gmt psbasemap -JX$SIZE1 -R$REGION1 -B$AXIS1 -P -K -X3.0c -Y15.0c  > $psfile
-awk '{print $1,$2*0.001 }' $linea_topo_bati | gmt psxy -R$REGION1 -JX$SIZE1 -W1,0/0/0 -K -O -P >> $psfile
+psbasemap -JX$SIZE1 -R$REGION1 -B$AXIS1 -P -K -X3.0c -Y15.0c  > $psfile
+awk '{print $1,$2*0.001 }' $linea_topo_bati | psxy -R$REGION1 -JX$SIZE1 -W4/10/10/10 -K -O -P >> $psfile
 
 ################# Texto (SW, NE) - Ahora es: AA', BB', CC' ###################
 set L1 = `echo "scale=2; $L-20.0" | bc`  # Operación para ubicar el texto "NE" (Ahora es: AA', BB', CC').
 if ($perfil_region == 'norte') then
-    echo 0 10 12 0 0 5 "A" | gmt pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
-    echo $L1 10 12 0 0 5 "A\47" | gmt pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
+    echo 0 10 12 0 0 5 "A" | pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
+    echo $L1 10 12 0 0 5 "A\47" | pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
 endif
 
 if ($perfil_region == 'centro') then
-    echo 0 10 12 0 0 5 "B" | gmt pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
-    echo $L1 10 12 0 0 5 "B\47" | gmt pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
+    echo 0 10 12 0 0 5 "B" | pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
+    echo $L1 10 12 0 0 5 "B\47" | pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
 endif
 
 if ($perfil_region == 'sur') then
-    echo 0 10 12 0 0 5 "C" | gmt pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
-    echo $L1 10 12 0 0 5 "C\47" | gmt pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
+    echo 0 10 12 0 0 5 "C" | pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
+    echo $L1 10 12 0 0 5 "C\47" | pstext -R$REGION1 -JX$SIZE1 -V -N -O -K >> $psfile
 endif
 ############ Perfil de Sismos (Longitud, Latitud, Profundidad) ###############
-gmt psbasemap -JX$SIZE2 -R$REGION2 -B$AXIS2 -P -K -X0 -Y-7.5c -O >> $psfile
+psbasemap -JX$SIZE2 -R$REGION2 -B$AXIS2 -P -K -X0 -Y-7.5c -O >> $psfile
 
 if ($mostrar_sup == 'si') then
-awk '{print $3, $2, $4*-1}' $txt_sup | gmt pscoupe -JX$SIZE2 -R$REGION2 \
--Aa$p1/$p2/90/$W_mitad/0/-60 -Fsc0.28 -G255/0/0 -L1 -P -O -K >> $psfile
+awk '{print $3, $2, $4*-1}' $txt_sup | pscoupe -JX$SIZE2 -R$REGION2 \
+-Aa$p1/$p2/90/$W_mitad/0/-60 -sc0.28 -G255/0/0 -L1 -P -O -K >> $psfile
 endif
 
 if ($mostrar_int == 'si') then
-awk '{print $3, $2, $4*-1}' $txt_int | gmt pscoupe -JX$SIZE2 -R$REGION2 \
--Aa$p1/$p2/90/$W_mitad/0/-60 -Fsc0.28 -G255/255/0 -L1 -P -O -K >> $psfile
+awk '{print $3, $2, $4*-1}' $txt_int | pscoupe -JX$SIZE2 -R$REGION2 \
+-Aa$p1/$p2/90/$W_mitad/0/-60 -sc0.28 -G255/255/0 -L1 -P -O -K >> $psfile
 endif
 
 if ($mostrar_prof == 'si') then
-awk '{print $3, $2, $4*-1}' $txt_pro | gmt pscoupe -JX$SIZE2 -R$REGION2 \
--Aa$p1/$p2/90/$W_mitad/0/-60 -Fsc0.28 -G0/0/255 -L1 -P -O -K >> $psfile
+awk '{print $3, $2, $4*-1}' $txt_pro | pscoupe -JX$SIZE2 -R$REGION2 \
+-Aa$p1/$p2/90/$W_mitad/0/-60 -sc0.28 -G0/0/255 -L1 -P -O -K >> $psfile
 endif
 
 ########################## Leyenda 01: Sismicidad ############################
@@ -212,7 +212,7 @@ endif
 set SIZE_LEYENDA = 3.65c/2.55c/7.2c/2.5c/TC
 
 if ($leyenda == 'si' && $mostrar_sup == 'si' && $mostrar_int == 'si' && $mostrar_prof == 'si') then
-gmt pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F+g255/255/255+p1p -O >> $psfile
+pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO_leyenda
 D 0 1p
 S 0.1i c 0.1i red 0.25p 0.2i $Texto_leyenda_01
@@ -225,7 +225,7 @@ END
 endif
 
 if ($leyenda == 'si' && $mostrar_sup == 'si' && $mostrar_int == 'si' && $mostrar_prof == 'no') then
-gmt pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F+g255/255/255+p1p -O >> $psfile
+pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO_leyenda
 D 0 1p
 S 0.1i c 0.1i red 0.25p 0.2i $Texto_leyenda_01
@@ -236,7 +236,7 @@ END
 endif
 
 if ($leyenda == 'si' && $mostrar_sup == 'si' && $mostrar_int == 'no' && $mostrar_prof == 'si') then
-gmt pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F+g255/255/255+p1p -O >> $psfile
+pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO_leyenda
 D 0 1p
 S 0.1i c 0.1i red 0.25p 0.2i $Texto_leyenda_01
@@ -247,7 +247,7 @@ END
 endif
 
 if ($leyenda == 'si' && $mostrar_sup == 'si' && $mostrar_int == 'no' && $mostrar_prof == 'no') then
-gmt pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F+g255/255/255+p1p -O >> $psfile
+pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO_leyenda
 D 0 1p
 S 0.1i c 0.1i red 0.25p 0.2i $Texto_leyenda_01
@@ -256,7 +256,7 @@ END
 endif
 
 if ($leyenda == 'si' && $mostrar_sup == 'no' && $mostrar_int == 'si' && $mostrar_prof == 'si') then
-gmt pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F+g255/255/255+p1p -O >> $psfile
+pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO_leyenda
 D 0 1p
 S 0.1i c 0.1i yellow 0.25p 0.2i $Texto_leyenda_02
@@ -267,7 +267,7 @@ END
 endif
 
 if ($leyenda == 'si' && $mostrar_sup == 'no' && $mostrar_int == 'si' && $mostrar_prof == 'no') then
-gmt pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F+g255/255/255+p1p -O >> $psfile
+pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO_leyenda
 D 0 1p
 S 0.1i c 0.1i yellow 0.25p 0.2i $Texto_leyenda_02
@@ -276,7 +276,7 @@ END
 endif
 
 if ($leyenda == 'si' && $mostrar_sup == 'no' && $mostrar_int == 'no' && $mostrar_prof == 'si') then
-gmt pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F+g255/255/255+p1p -O >> $psfile
+pslegend <<END -Dx$SIZE_LEYENDA -R$REGION2 -JX$SIZE2 -F -G255/255/255 -O >> $psfile
 H 12 1 $TITULO_leyenda
 D 0 1p
 S 0.1i c 0.1i blue 0.25p 0.2i $Texto_leyenda_03

@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 #==================================================================================
 #   +==========================================================================+  #
-#   |                              GrafSPS v1.1.0                              |  #
+#   |                              GrafSPS v1.2.0                              |  #
 #   +==========================================================================+  #
 #   | -Graficador de Sismicidad y Perfiles Sísmicos                            |  #
 #   | -Interfaz gráfica: PyQt5                                                 |  #
-#   | -Ultima actualizacion: 17/10/2020                                        |  #
+#   | -Ultima actualizacion: 30/12/2022                                        |  #
 #   +--------------------------------------------------------------------------+  #
 #   | -Copyright (C) 2020  Nestor Luna Diaz                                    |  #
 #   +--------------------------------------------------------------------------+  #
@@ -30,19 +30,18 @@
 #==================================================================================
 # NOTA:
 # - Este Script y todos los Sub-Scripts están pensados para graficar la sismicidad
-#   en el Perú utilizando el catálogo sísmico del NEIC-USGS son ',' (archivo CSV
+#   en el Perú utilizando el catálogo sísmico del NEIC-USGS sin ','s (archivo CSV
 #   sin comas).
 # - Se recomienda modificar manualmente el título de la leyenda.
 
 #==================================================================================
-# REQUISITOS MINIMOS:
-# - GMT4 (Linux)
-# - Shell y C-Shell (Linux)
-# - ps2eps (Linux)
-# - Evince (Linux)
-# - python3 (Linux)
-# - python3-pyqt5 (Linux)
-# - GNU Linux (Kernel 4.15) 64-bit [Se recomienda una distribución con KDE Plasma 5.12 o superior]
+# - GMT4 o GMT6
+# - sh & csh
+# - gawk
+# - ps2eps
+# - evince
+# - python3
+# - python3-pyqt5
 #==================================================================================
 
 import sys
@@ -185,7 +184,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 
 #============================================================================================================
     def Borrar_resultados(self):
-        comando_01 = "rm .gmt* *.txt *.eps *.ps *.cpt"
+        comando_01 = "rm .gmt* gmt.conf gmt.history *.txt *.eps *.ps *.cpt"
         process = subprocess.Popen(comando_01, shell=True)
 #============================================================================================================
 
